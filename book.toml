@@ -1,0 +1,8 @@
+title = "Boiding"
+authors = ["Jan-Erik Rediger", "Daan van Berkel"]
+description = "A workbook for the boiding workshop"
+
+source = "src"
+
+[output.html]
+destination = "book"
