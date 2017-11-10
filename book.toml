@@ -5,4 +5,4 @@ description = "A workbook for the boiding workshop"
 source = "src"
 
 [output.html]
-destination = "book"
+destination = "docs"
