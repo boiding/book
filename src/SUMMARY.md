@@ -7,4 +7,5 @@
     - [Separation](./background/separation.md)
     - [Alignment](./background/alignment.md)
     - [Cohesion](./background/cohesion.md)
+- [Material](./material.md)
 - [References](./references.md)
