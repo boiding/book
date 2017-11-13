@@ -6,3 +6,4 @@ source = "src"
 
 [output.html]
 destination = "docs"
+mathjax-support = true
