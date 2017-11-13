@@ -60,3 +60,7 @@ and primary speed, i.e. the primary velocity, to the intended heading and
 intended speed. Changing course takes times and that is reflected in this value.
 It ranges from 0 to 1 where 0 represents a total *inability* to change velocity
 and 1 represents the ability to instantly change course.
+
+#### Influence Sphere
+This is the area in which other boids are sensed an as a result interacted with.
+It is a circle centered at the position of the boid and measured by a radius.
