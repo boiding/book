@@ -124,6 +124,21 @@ heading of 0.</p>
 <a class="header" href="boid.html#speed" id="speed"><h4>Speed</h4></a>
 <p>The <em>speed</em> measures how fast the boid is going. Together with the heading this
 makes up the velocity.</p>
+<a class="header" href="boid.html#secondary" id="secondary"><h3>Secondary</h3></a>
+<p>The secondary characteristics are used in the simulation, but are less apparent
+than the primary characteristic.</p>
+<a class="header" href="boid.html#intended heading" id="intended heading"><h4>Intended Heading</h4></a>
+<p>This is the heading your boid would like to have. It could differ from the
+primary heading and is used to steer the boid in order to avoid collisions or
+signal preferred direction.</p>
+<a class="header" href="boid.html#intended speed" id="intended speed"><h4>Intended Speed</h4></a>
+<p>Like the intended heading, this is the speed the boid would want to move in.</p>
+<a class="header" href="boid.html#agility" id="agility"><h4>Agility</h4></a>
+<p>The <em>agility</em> determines how quickly the boid can go from the primary heading
+and primary speed, i.e. the primary velocity, to the intended heading and
+intended speed. Changing course takes times and that is reflected in this value.
+It ranges from 0 to 1 where 0 represents a total <em>inability</em> to change velocity
+and 1 represents the ability to instantly change course.</p>
 
                 </div>
 

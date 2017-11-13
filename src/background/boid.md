@@ -41,3 +41,22 @@ heading of 0.
 #### Speed
 The _speed_ measures how fast the boid is going. Together with the heading this
 makes up the velocity.
+
+### Secondary
+The secondary characteristics are used in the simulation, but are less apparent
+than the primary characteristic.
+
+#### Intended Heading
+This is the heading your boid would like to have. It could differ from the
+primary heading and is used to steer the boid in order to avoid collisions or
+signal preferred direction.
+
+#### Intended Speed
+Like the intended heading, this is the speed the boid would want to move in.
+
+#### Agility
+The _agility_ determines how quickly the boid can go from the primary heading
+and primary speed, i.e. the primary velocity, to the intended heading and
+intended speed. Changing course takes times and that is reflected in this value.
+It ranges from 0 to 1 where 0 represents a total *inability* to change velocity
+and 1 represents the ability to instantly change course.
