@@ -26,6 +26,9 @@
         
 
         
+        <!-- MathJax -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
 
         <!-- Fetch Clipboard.js from CDN but have a local fallback -->
         <script src="https://cdn.jsdelivr.net/clipboard.js/1.6.1/clipboard.min.js"></script>
@@ -90,6 +93,37 @@
 <p>A <em>boid</em> is a virtual creatures, much like a bird or a fish. You should get
 attached to it, because we are going to spend a lot of time with them. We are
 going to teach it how to move gracefully among their siblings.</p>
+<p>You might not know it, but you have probably seen our friend before. If you are
+familiar with movies like <em>The Lion King</em> or <em>Batman returns</em>, you have seen
+boids before. In The Lion King the stampede of wildebeests was created with a
+boid algorithm. The bats and also penguins were similar modeled in Batman
+returns.</p>
+<p>Although the original boids moved in a three dimensional world, to keep things
+simple we are going to restrict the movement of our boids to two dimensions.</p>
+<a class="header" href="boid.html#characteristics" id="characteristics"><h2>Characteristics</h2></a>
+<p>In this section we will provide an high level overview of the characteristics of
+our boid. These pertain to the simulation we are going to before, but feel free
+to attribute other characteristics.</p>
+<a class="header" href="boid.html#primary" id="primary"><h3>Primary</h3></a>
+<p>The primary characteristics are the characteristics that one can measure. You
+can find them below.</p>
+<a class="header" href="boid.html#position" id="position"><h4>Position</h4></a>
+<p>Maybe the most striking characteristic is the boids <em>position</em>. It keeps track
+of where the boid is. We describe it by two projects, i.e. the <em>x</em> coordinate
+and the <em>y</em> coordinate.</p>
+<p>The world that the boids occupy wraps around on it self. This means that it
+doesn't have edges. If a boid moves off the right side of the world it enters on
+the left side of the world and vice versa. Similar for the top and bottom of the
+world.</p>
+<a class="header" href="boid.html#heading" id="heading"><h4>Heading</h4></a>
+<p>An other characteristic of a boid is its <em>heading</em>, i.e. The angle it is
+pointing in. These angles are measured in
+<a href="https://en.wikipedia.org/wiki/Radian">radians</a> and have a range of
+\(-\pi\) to \(+\pi\). When the boid is pointing to the right she has a
+heading of 0.</p>
+<a class="header" href="boid.html#speed" id="speed"><h4>Speed</h4></a>
+<p>The <em>speed</em> measures how fast the boid is going. Together with the heading this
+makes up the velocity.</p>
 
                 </div>
 
