@@ -5,4 +5,5 @@
 - [Background](./background.md)
     - [Boid](./background/boid.md)
     - [Separation](./background/separation.md)
+    - [Alignment](./background/alignment.md)
 - [References](./references.md)
