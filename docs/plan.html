@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Boiding - Boiding</title>
+        <title>Plan - Boiding</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="A workbook for the boiding workshop">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -69,7 +69,7 @@
         </script>
 
         <div id="sidebar" class="sidebar">
-            <ul class="chapter"><li class="affix"><a href="./boiding.html" class="active">Boiding</a></li><li><a href="./expect.html"><strong>1.</strong> What to expect</a></li><li><a href="./background.html"><strong>2.</strong> Background</a></li><li><ul class="section"><li><a href="./background/boid.html"><strong>2.1.</strong> Boid</a></li><li><a href="./background/separation.html"><strong>2.2.</strong> Separation</a></li><li><a href="./background/alignment.html"><strong>2.3.</strong> Alignment</a></li><li><a href="./background/cohesion.html"><strong>2.4.</strong> Cohesion</a></li></ul></li><li><a href="./plan.html"><strong>3.</strong> Plan</a></li><li class="affix"><a href="./material.html">Material</a></li><li class="affix"><a href="./references.html">References</a></li></ul>
+            <ul class="chapter"><li class="affix"><a href="./boiding.html">Boiding</a></li><li><a href="./expect.html"><strong>1.</strong> What to expect</a></li><li><a href="./background.html"><strong>2.</strong> Background</a></li><li><ul class="section"><li><a href="./background/boid.html"><strong>2.1.</strong> Boid</a></li><li><a href="./background/separation.html"><strong>2.2.</strong> Separation</a></li><li><a href="./background/alignment.html"><strong>2.3.</strong> Alignment</a></li><li><a href="./background/cohesion.html"><strong>2.4.</strong> Cohesion</a></li></ul></li><li><a href="./plan.html" class="active"><strong>3.</strong> Plan</a></li><li class="affix"><a href="./material.html">Material</a></li><li class="affix"><a href="./references.html">References</a></li></ul>
         </div>
 
         <div id="page-wrapper" class="page-wrapper">
@@ -89,16 +89,52 @@
                 </div>
 
                 <div id="content" class="content">
-                    <a class="header" href="boiding.html#boiding" id="boiding"><h1>Boiding</h1></a>
-<p>An exploration in <a href="https://en.wikipedia.org/wiki/Boids">Boids</a>.</p>
+                    <a class="header" href="plan.html#plan" id="plan"><h1>Plan</h1></a>
+<p>We will go over the high level plan for this workshop. We will detail all the
+moving parts and how they interact.</p>
+<p>We will ask you to team up. Working in pairs has the added benefit that you can
+learn from each other. Your team is responsible for creating a web server that
+has the responsibility to answer the question what your boid wants to do. You
+will register your web server to the workshop server. The workshop server is
+responsible for coordinating the boids brains (your web servers) and the boids
+behavior (the simulation).</p>
+<p>If this sounds daunting, relax. We went to great lengths to make this a joyous,
+interesting and stimulating workshop.</p>
+<a class="header" href="plan.html#wlan" id="wlan"><h2>WLAN</h2></a>
+<p>We setup a Wireless Local Area Network (WLAN) so that the computer participating
+in the workshop can find each other without a trouble. Look for a network with
+the following credentials</p>
+<ul>
+<li>SSID: <strong>boiding_workshop</strong></li>
+<li>password: <strong>2boid||!2boid</strong></li>
+</ul>
+<a class="header" href="plan.html#starter kits" id="starter kits"><h2>Starter Kits</h2></a>
+<p>We prepared starter kits in various languages. You can find them in the workshop
+material. Copy the starter of your choice and get ready to teaching your boids.</p>
+<p>Your web server should listen on <strong>port 2643</strong> which spells <em>boid</em> a phones
+keypad. Your starter kits already make this happen.</p>
+<a class="header" href="plan.html#register your server" id="register your server"><h2>Register Your Server</h2></a>
+<p>The workshop server should be come aware of your web server. Each start kit has
+a automated way to register itself. See the README in your starter kit how the
+specific registration works.</p>
+<a class="header" href="plan.html#teach your boids" id="teach your boids"><h2>Teach Your Boids</h2></a>
+<p>This is were you are able to shine. Teach your boids in a way you see fit. The
+README in the starter kit of your choice will point you in the right direction.</p>
+<a class="header" href="plan.html#run the server" id="run the server"><h2>Run The Server</h2></a>
+<p>Running your server allows your boids to roam free in their habitat and follow
+the path you thought them to follow.</p>
 
                 </div>
 
                 <!-- Mobile navigation buttons -->
                 
+                    <a rel="prev" href="./background/cohesion.html" class="mobile-nav-chapters previous">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
 
                 
-                    <a rel="next" href="./expect.html" class="mobile-nav-chapters next">
+                    <a rel="next" href="./material.html" class="mobile-nav-chapters next">
                         <i class="fa fa-angle-right"></i>
                     </a>
                 
@@ -106,9 +142,13 @@
             </div>
 
             
+                <a href="./background/cohesion.html" class="nav-chapters previous" title="You can navigate through the chapters using the arrow keys">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+            
 
             
-                <a href="./expect.html" class="nav-chapters next" title="You can navigate through the chapters using the arrow keys">
+                <a href="./material.html" class="nav-chapters next" title="You can navigate through the chapters using the arrow keys">
                     <i class="fa fa-angle-right"></i>
                 </a>
             

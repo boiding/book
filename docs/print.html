@@ -69,7 +69,7 @@
         </script>
 
         <div id="sidebar" class="sidebar">
-            <ul class="chapter"><li><a href="./boiding.html"><strong>1.</strong> Boiding</a></li><li><a href="./expect.html"><strong>2.</strong> What to expect</a></li><li><a href="./background.html"><strong>3.</strong> Background</a></li><li><ul class="section"><li><a href="./background/boid.html"><strong>3.1.</strong> Boid</a></li><li><a href="./background/separation.html"><strong>3.2.</strong> Separation</a></li><li><a href="./background/alignment.html"><strong>3.3.</strong> Alignment</a></li><li><a href="./background/cohesion.html"><strong>3.4.</strong> Cohesion</a></li></ul></li><li><a href="./material.html"><strong>4.</strong> Material</a></li><li><a href="./references.html"><strong>5.</strong> References</a></li></ul>
+            <ul class="chapter"><li class="affix"><a href="./boiding.html">Boiding</a></li><li><a href="./expect.html"><strong>1.</strong> What to expect</a></li><li><a href="./background.html"><strong>2.</strong> Background</a></li><li><ul class="section"><li><a href="./background/boid.html"><strong>2.1.</strong> Boid</a></li><li><a href="./background/separation.html"><strong>2.2.</strong> Separation</a></li><li><a href="./background/alignment.html"><strong>2.3.</strong> Alignment</a></li><li><a href="./background/cohesion.html"><strong>2.4.</strong> Cohesion</a></li></ul></li><li><a href="./plan.html"><strong>3.</strong> Plan</a></li><li class="affix"><a href="./material.html">Material</a></li><li class="affix"><a href="./references.html">References</a></li></ul>
         </div>
 
         <div id="page-wrapper" class="page-wrapper">
@@ -168,6 +168,40 @@ your budding boids to minimize the chances of collisions.</p>
 <p><img src="image/cohesion.gif" alt="Surrounding yourself with budding boids increases survival chances." /></p>
 <p>Predators attack on the outside of your cohort. It motivates boids to move to
 the center of the flock.</p>
+<a class="header" href="print.html#plan" id="plan"><h1>Plan</h1></a>
+<p>We will go over the high level plan for this workshop. We will detail all the
+moving parts and how they interact.</p>
+<p>We will ask you to team up. Working in pairs has the added benefit that you can
+learn from each other. Your team is responsible for creating a web server that
+has the responsibility to answer the question what your boid wants to do. You
+will register your web server to the workshop server. The workshop server is
+responsible for coordinating the boids brains (your web servers) and the boids
+behavior (the simulation).</p>
+<p>If this sounds daunting, relax. We went to great lengths to make this a joyous,
+interesting and stimulating workshop.</p>
+<a class="header" href="print.html#wlan" id="wlan"><h2>WLAN</h2></a>
+<p>We setup a Wireless Local Area Network (WLAN) so that the computer participating
+in the workshop can find each other without a trouble. Look for a network with
+the following credentials</p>
+<ul>
+<li>SSID: <strong>boiding_workshop</strong></li>
+<li>password: <strong>2boid||!2boid</strong></li>
+</ul>
+<a class="header" href="print.html#starter kits" id="starter kits"><h2>Starter Kits</h2></a>
+<p>We prepared starter kits in various languages. You can find them in the workshop
+material. Copy the starter of your choice and get ready to teaching your boids.</p>
+<p>Your web server should listen on <strong>port 2643</strong> which spells <em>boid</em> a phones
+keypad. Your starter kits already make this happen.</p>
+<a class="header" href="print.html#register your server" id="register your server"><h2>Register Your Server</h2></a>
+<p>The workshop server should be come aware of your web server. Each start kit has
+a automated way to register itself. See the README in your starter kit how the
+specific registration works.</p>
+<a class="header" href="print.html#teach your boids" id="teach your boids"><h2>Teach Your Boids</h2></a>
+<p>This is were you are able to shine. Teach your boids in a way you see fit. The
+README in the starter kit of your choice will point you in the right direction.</p>
+<a class="header" href="print.html#run the server" id="run the server"><h2>Run The Server</h2></a>
+<p>Running your server allows your boids to roam free in their habitat and follow
+the path you thought them to follow.</p>
 <a class="header" href="print.html#material" id="material"><h1>Material</h1></a>
 <p>If you find yourself at an actual boiding workshop the material for this
 workshop is made available on a thumb drive. Grab one from the copy it to your
