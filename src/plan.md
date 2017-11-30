@@ -22,9 +22,9 @@ the following credentials
 
 ## Starter Kits
 We prepared starter kits in various languages. You can find them in the workshop
-material. Copy the starter of your choice and get ready to teaching your boids. 
+material. Copy the starter of your choice and get ready to teaching your boids.
 
-Your web server should listen on **port 2643** which spells _boid_ a phones
+Your web server should listen on **port 2643** which spells _boid_ on a phone's
 keypad. Your starter kits already make this happen.
 
 
