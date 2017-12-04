@@ -8,5 +8,6 @@
     - [Alignment](./background/alignment.md)
     - [Cohesion](./background/cohesion.md)
 - [Plan](./plan.md)
+- [Web Server](./server.md)
 [Material](./material.md)
 [References](./references.md)

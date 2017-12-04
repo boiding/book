@@ -27,7 +27,6 @@ material. Copy the starter of your choice and get ready to teaching your boids.
 Your web server should listen on **port 2643** which spells _boid_ on a phone's
 keypad. Your starter kits already make this happen.
 
-
 ## Register Your Server
 The workshop server should be come aware of your web server. Each start kit has
 a automated way to register itself. See the README in your starter kit how the
