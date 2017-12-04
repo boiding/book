@@ -220,6 +220,14 @@ to your web server. It should respond with a
 <a href="https://httpstatuses.com/204"><code>204</code></a> indicating a successful request without
 content.
 This will tell the workshop server your web server is still running.</p>
+<a class="header" href="print.html#brain" id="brain"><h3><code>/brain</code></h3></a>
+<p>The workshop server needs to know how your boids are going to react to their
+environment. It will send a
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/POST"><code>POST</code> request</a>
+with your current flock as <a href="https://www.json.org/">JSON</a> data. Your web server
+should figure out what each boid in your flock want to do and send their
+decisions back as JSON.</p>
+<p>The workshop server will take your response and integrate that in the simulation.</p>
 <a class="header" href="print.html#material" id="material"><h1>Material</h1></a>
 <p>If you find yourself at an actual boiding workshop the material for this
 workshop is made available on a thumb drive. Grab one from the copy it to your

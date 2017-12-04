@@ -19,3 +19,13 @@ to your web server. It should respond with a
 [`204`](https://httpstatuses.com/204) indicating a successful request without
 content.
 This will tell the workshop server your web server is still running.
+
+### `/brain`
+The workshop server needs to know how your boids are going to react to their
+environment. It will send a 
+[`POST` request](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/POST)
+with your current flock as [JSON](https://www.json.org/) data. Your web server
+should figure out what each boid in your flock want to do and send their
+decisions back as JSON.
+
+The workshop server will take your response and integrate that in the simulation.
