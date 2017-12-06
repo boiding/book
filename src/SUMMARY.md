@@ -9,6 +9,7 @@
     - [Cohesion](./background/cohesion.md)
 - [Plan](./plan.md)
 - [Web Server](./server.md)
+    - [Responsibilities](./server/responsibilities.md)
 - [Brain](./brain.md)
 [Material](./material.md)
 [References](./references.md)

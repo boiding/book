@@ -2,12 +2,12 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Material - Boiding</title>
+        <title>Responsibilities - Boiding</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="A workbook for the boiding workshop">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <base href="">
+        <base href="../">
 
         <link rel="stylesheet" href="book.css">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
@@ -69,7 +69,7 @@
         </script>
 
         <div id="sidebar" class="sidebar">
-            <ul class="chapter"><li class="affix"><a href="./boiding.html">Boiding</a></li><li><a href="./expect.html"><strong>1.</strong> What to expect</a></li><li><a href="./background.html"><strong>2.</strong> Background</a></li><li><ul class="section"><li><a href="./background/boid.html"><strong>2.1.</strong> Boid</a></li><li><a href="./background/separation.html"><strong>2.2.</strong> Separation</a></li><li><a href="./background/alignment.html"><strong>2.3.</strong> Alignment</a></li><li><a href="./background/cohesion.html"><strong>2.4.</strong> Cohesion</a></li></ul></li><li><a href="./plan.html"><strong>3.</strong> Plan</a></li><li><a href="./server.html"><strong>4.</strong> Web Server</a></li><li><ul class="section"><li><a href="./server/responsibilities.html"><strong>4.1.</strong> Responsibilities</a></li></ul></li><li><a href="./brain.html"><strong>5.</strong> Brain</a></li><li class="affix"><a href="./material.html" class="active">Material</a></li><li class="affix"><a href="./references.html">References</a></li></ul>
+            <ul class="chapter"><li class="affix"><a href="./boiding.html">Boiding</a></li><li><a href="./expect.html"><strong>1.</strong> What to expect</a></li><li><a href="./background.html"><strong>2.</strong> Background</a></li><li><ul class="section"><li><a href="./background/boid.html"><strong>2.1.</strong> Boid</a></li><li><a href="./background/separation.html"><strong>2.2.</strong> Separation</a></li><li><a href="./background/alignment.html"><strong>2.3.</strong> Alignment</a></li><li><a href="./background/cohesion.html"><strong>2.4.</strong> Cohesion</a></li></ul></li><li><a href="./plan.html"><strong>3.</strong> Plan</a></li><li><a href="./server.html"><strong>4.</strong> Web Server</a></li><li><ul class="section"><li><a href="./server/responsibilities.html" class="active"><strong>4.1.</strong> Responsibilities</a></li></ul></li><li><a href="./brain.html"><strong>5.</strong> Brain</a></li><li class="affix"><a href="./material.html">Material</a></li><li class="affix"><a href="./references.html">References</a></li></ul>
         </div>
 
         <div id="page-wrapper" class="page-wrapper">
@@ -89,30 +89,40 @@
                 </div>
 
                 <div id="content" class="content">
-                    <a class="header" href="material.html#material" id="material"><h1>Material</h1></a>
-<p>If you find yourself at an actual boiding workshop the material for this
-workshop is made available on a thumb drive. Grab one from the copy it to your
-own machine.</p>
-<p>The material was created with
-<a href="https://github.com/boiding/material">material repository</a>. You should be able
-to create your own workshop resources by cloning that repository and running the
-<code>make</code> command.</p>
-<pre><code>&gt; git clone https://github.com/boiding/material.git
-&gt; cd material
-&gt; make
-</code></pre>
+                    <a class="header" href="responsibilities.html#responsibilities" id="responsibilities"><h1>Responsibilities</h1></a>
+<p>Your web server has a couple of responsibilities. Besides forming the brain of
+your boids, it also needs to convince the workshop server it is operating within
+well established parameters.</p>
+<p>A lot of things can go wrong. And we need to check for those. One of the things
+that can go wrong is that your web server has stopped. Your web server must
+respond to a heartbeat request so we know you server is still participating.</p>
+<a class="header" href="responsibilities.html#heartbeat" id="heartbeat"><h2><code>/heartbeat</code></h2></a>
+<p>The workshop server periodically will send a
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/HEAD"><code>HEAD</code> request</a>
+to your web server. It should respond with a
+<a href="https://httpstatuses.com/204"><code>204</code></a> indicating a successful request without
+content.
+This will tell the workshop server your web server is still running.</p>
+<a class="header" href="responsibilities.html#brain" id="brain"><h2><code>/brain</code></h2></a>
+<p>The workshop server needs to know how your boids are going to react to their
+environment. It will send a
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/POST"><code>POST</code> request</a>
+with your current flock as <a href="https://www.json.org/">JSON</a> data. Your web server
+should figure out what each boid in your flock want to do and send their
+decisions back as JSON.</p>
+<p>The workshop server will take your response and integrate that in the simulation.</p>
 
                 </div>
 
                 <!-- Mobile navigation buttons -->
                 
-                    <a rel="prev" href="./brain.html" class="mobile-nav-chapters previous">
+                    <a rel="prev" href="./server.html" class="mobile-nav-chapters previous">
                         <i class="fa fa-angle-left"></i>
                     </a>
                 
 
                 
-                    <a rel="next" href="./references.html" class="mobile-nav-chapters next">
+                    <a rel="next" href="./brain.html" class="mobile-nav-chapters next">
                         <i class="fa fa-angle-right"></i>
                     </a>
                 
@@ -120,13 +130,13 @@ to create your own workshop resources by cloning that repository and running the
             </div>
 
             
-                <a href="./brain.html" class="nav-chapters previous" title="You can navigate through the chapters using the arrow keys">
+                <a href="./server.html" class="nav-chapters previous" title="You can navigate through the chapters using the arrow keys">
                     <i class="fa fa-angle-left"></i>
                 </a>
             
 
             
-                <a href="./references.html" class="nav-chapters next" title="You can navigate through the chapters using the arrow keys">
+                <a href="./brain.html" class="nav-chapters next" title="You can navigate through the chapters using the arrow keys">
                     <i class="fa fa-angle-right"></i>
                 </a>
             

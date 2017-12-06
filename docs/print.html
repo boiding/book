@@ -69,7 +69,7 @@
         </script>
 
         <div id="sidebar" class="sidebar">
-            <ul class="chapter"><li class="affix"><a href="./boiding.html">Boiding</a></li><li><a href="./expect.html"><strong>1.</strong> What to expect</a></li><li><a href="./background.html"><strong>2.</strong> Background</a></li><li><ul class="section"><li><a href="./background/boid.html"><strong>2.1.</strong> Boid</a></li><li><a href="./background/separation.html"><strong>2.2.</strong> Separation</a></li><li><a href="./background/alignment.html"><strong>2.3.</strong> Alignment</a></li><li><a href="./background/cohesion.html"><strong>2.4.</strong> Cohesion</a></li></ul></li><li><a href="./plan.html"><strong>3.</strong> Plan</a></li><li><a href="./server.html"><strong>4.</strong> Web Server</a></li><li><a href="./brain.html"><strong>5.</strong> Brain</a></li><li class="affix"><a href="./material.html">Material</a></li><li class="affix"><a href="./references.html">References</a></li></ul>
+            <ul class="chapter"><li class="affix"><a href="./boiding.html">Boiding</a></li><li><a href="./expect.html"><strong>1.</strong> What to expect</a></li><li><a href="./background.html"><strong>2.</strong> Background</a></li><li><ul class="section"><li><a href="./background/boid.html"><strong>2.1.</strong> Boid</a></li><li><a href="./background/separation.html"><strong>2.2.</strong> Separation</a></li><li><a href="./background/alignment.html"><strong>2.3.</strong> Alignment</a></li><li><a href="./background/cohesion.html"><strong>2.4.</strong> Cohesion</a></li></ul></li><li><a href="./plan.html"><strong>3.</strong> Plan</a></li><li><a href="./server.html"><strong>4.</strong> Web Server</a></li><li><ul class="section"><li><a href="./server/responsibilities.html"><strong>4.1.</strong> Responsibilities</a></li></ul></li><li><a href="./brain.html"><strong>5.</strong> Brain</a></li><li class="affix"><a href="./material.html">Material</a></li><li class="affix"><a href="./references.html">References</a></li></ul>
         </div>
 
         <div id="page-wrapper" class="page-wrapper">
@@ -206,21 +206,21 @@ the path you thought them to follow.</p>
 <p>In this chapter we will describe the web server that you will be creating. If
 you are using a starter kit, most of what is described here is already taken
 care of.</p>
-<a class="header" href="print.html#responsibilities" id="responsibilities"><h2>Responsibilities</h2></a>
+<a class="header" href="print.html#responsibilities" id="responsibilities"><h1>Responsibilities</h1></a>
 <p>Your web server has a couple of responsibilities. Besides forming the brain of
 your boids, it also needs to convince the workshop server it is operating within
 well established parameters.</p>
 <p>A lot of things can go wrong. And we need to check for those. One of the things
 that can go wrong is that your web server has stopped. Your web server must
 respond to a heartbeat request so we know you server is still participating.</p>
-<a class="header" href="print.html#heartbeat" id="heartbeat"><h3><code>/heartbeat</code></h3></a>
+<a class="header" href="print.html#heartbeat" id="heartbeat"><h2><code>/heartbeat</code></h2></a>
 <p>The workshop server periodically will send a
 <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/HEAD"><code>HEAD</code> request</a>
 to your web server. It should respond with a
 <a href="https://httpstatuses.com/204"><code>204</code></a> indicating a successful request without
 content.
 This will tell the workshop server your web server is still running.</p>
-<a class="header" href="print.html#brain" id="brain"><h3><code>/brain</code></h3></a>
+<a class="header" href="print.html#brain" id="brain"><h2><code>/brain</code></h2></a>
 <p>The workshop server needs to know how your boids are going to react to their
 environment. It will send a
 <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/POST"><code>POST</code> request</a>
