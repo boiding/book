@@ -168,6 +168,32 @@ your budding boids to minimize the chances of collisions.</p>
 <p><img src="image/cohesion.gif" alt="Surrounding yourself with budding boids increases survival chances." /></p>
 <p>Predators attack on the outside of your cohort. It motivates boids to move to
 the center of the flock.</p>
+<a class="header" href="print.html#calculation" id="calculation"><h2>Calculation</h2></a>
+<p>Let the position of our boids be given by a sequence of coordinates
+\(p_{1} = (x_{1}, y_{1}), p_{2} = (x_{2}, y_{2}), \ldots, p_{n} = (x_{n}, y_{n})\).</p>
+<p>The <a href="https://en.wikipedia.org/wiki/Center_of_mass"><em>center of mass</em></a> is
+calculated by averaging the positions. This assumes that the boids all weigh the
+same. Since our boids are virtual, we can mold them as we see fit.</p>
+<p>The averaging can be done component-wise so the x-coordinate of the center of
+mass can be calculated with</p>
+<p>\[
+x_{c} = \frac{1}{n}\sum_{i=1}^{n} x_{i}
+\]</p>
+<p>Likewise the y-coordinate of the center of mass isize</p>
+<p>\[
+y_{c} = \frac{1}{n}\sum_{i=1}^{n} y_{i}
+\]</p>
+<p>Together this gives \(p_{c} = (x_{c}, y_{c})\) for the center of mass.</p>
+<p>Now that we know the center of mass, we would like to figure out the heading a
+boid needs to fly in to head towards the center of mass. If the position of the
+boid is \(p = (x, y)\), the direction to fly in is found by subtracting the
+center of mass from the boid's position.</p>
+<p>\[
+d := p_{c} - p = (x_{c} - x, y_{c} - y)
+\]</p>
+<p>We can calculate the heading from this by taking the
+<a href="https://en.wikipedia.org/wiki/Inverse_trigonometric_functions"><em>arctangent</em></a>
+; \(\operatorname{atan}(\frac{y_{c} - y}{x_{c} - x})\)</p>
 <a class="header" href="print.html#plan" id="plan"><h1>Plan</h1></a>
 <p>We will go over the high level plan for this workshop. We will detail all the
 moving parts and how they interact.</p>
