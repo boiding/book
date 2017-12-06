@@ -22,7 +22,7 @@ the
 [_arctangent_](https://en.wikipedia.org/wiki/Inverse_trigonometric_functions).
 
 \\[
-h_{i} = \operatorname{arctan}(\frac{y_{i} - y}{x_{i} - x})
+h_{i} = \operatorname{arctan}\left(\frac{y_{i} - y}{x_{i} - x}\right)
 \\]
 
 We would like to choose a heading that avoids all of the headings \\(h_{i}\\),

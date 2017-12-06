@@ -175,7 +175,7 @@ d_{i} = p_{i} - p = (x_{i} - x, y_{i} - y)
 the
 <a href="https://en.wikipedia.org/wiki/Inverse_trigonometric_functions"><em>arctangent</em></a>.</p>
 <p>\[
-h_{i} = \operatorname{arctan}(\frac{y_{i} - y}{x_{i} - x})
+h_{i} = \operatorname{arctan}\left(\frac{y_{i} - y}{x_{i} - x}\right)
 \]</p>
 <p>We would like to choose a heading that avoids all of the headings \(h_{i}\),
 if we want to avoid a collision.</p>
@@ -189,11 +189,22 @@ h := \frac{1}{n} \sum_{i=1}^{n} h_{i}
 <a class="header" href="print.html#alignment" id="alignment"><h1>Alignment</h1></a>
 <p><img src="image/alignment.gif" alt="Try to fly in the same average heading of your cohort" /></p>
 <p>Aligning yourself in the average heading of your cohort is an other motivation.</p>
+<a class="header" href="print.html#calculation-1" id="calculation-1"><h2>Calculation</h2></a>
+<p>Instead of working on the position of our cohort of boids, we are working with
+the headings. Let the heading of our boids be given by a sequence
+\(h_{1}, h_{2},\ldots,h_{n}\).</p>
+<p>We would like to align our heading with the average of the heading in our
+cohort. The average is calculated by</p>
+<p>\[
+h := \frac{1}{n} \sum_{i=1}^{n} h_{i}
+\]</p>
+<p>This is the heading our boid needs to move in if she wants to align herself to
+her cohort.</p>
 <a class="header" href="print.html#cohesion" id="cohesion"><h1>Cohesion</h1></a>
 <p><img src="image/cohesion.gif" alt="Surrounding yourself with budding boids increases survival chances." /></p>
 <p>Predators attack on the outside of your cohort. It motivates boids to move to
 the center of the flock.</p>
-<a class="header" href="print.html#calculation-1" id="calculation-1"><h2>Calculation</h2></a>
+<a class="header" href="print.html#calculation-2" id="calculation-2"><h2>Calculation</h2></a>
 <p>Let the position of our boids be given by a sequence of coordinates
 \(p_{1} = (x_{1}, y_{1}), p_{2} = (x_{2}, y_{2}), \ldots, p_{n} = (x_{n}, y_{n})\).</p>
 <p>The <a href="https://en.wikipedia.org/wiki/Center_of_mass"><em>center of mass</em></a> is

@@ -92,6 +92,17 @@
                     <a class="header" href="alignment.html#alignment" id="alignment"><h1>Alignment</h1></a>
 <p><img src="image/alignment.gif" alt="Try to fly in the same average heading of your cohort" /></p>
 <p>Aligning yourself in the average heading of your cohort is an other motivation.</p>
+<a class="header" href="alignment.html#calculation" id="calculation"><h2>Calculation</h2></a>
+<p>Instead of working on the position of our cohort of boids, we are working with
+the headings. Let the heading of our boids be given by a sequence
+\(h_{1}, h_{2},\ldots,h_{n}\).</p>
+<p>We would like to align our heading with the average of the heading in our
+cohort. The average is calculated by</p>
+<p>\[
+h := \frac{1}{n} \sum_{i=1}^{n} h_{i}
+\]</p>
+<p>This is the heading our boid needs to move in if she wants to align herself to
+her cohort.</p>
 
                 </div>
 
