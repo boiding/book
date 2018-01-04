@@ -7,3 +7,4 @@ source = "src"
 [output.html]
 destination = "docs"
 mathjax-support = true
+additional-js = ["https://platform.twitter.com/widgets.js"]
