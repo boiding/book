@@ -1,9 +1,9 @@
 # What to expect
-This book is used during the _Boiding_ workshop. I allows you explore to
+This book is used during the _Boiding_ workshop. It allows you explore to
 [Craig Reynold's](https://www.red3d.com/cwr/) _boids_ that simulate flocking
 behavior of animals such as fish and birds.
 
-But this is not a passive workshop. You get to explore the simulation by
+But this is not a passive workshop! You get to explore the simulation by
 building it! We provide you with the background to understand the algorithm and
 a platform to explore the algorithm.
 
