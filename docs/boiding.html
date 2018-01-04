@@ -91,6 +91,7 @@
                 <div id="content" class="content">
                     <a class="header" href="boiding.html#boiding" id="boiding"><h1>Boiding</h1></a>
 <p>An exploration in <a href="https://en.wikipedia.org/wiki/Boids">Boids</a>.</p>
+<p><img src="image/bird.jpg" alt="A murmuring of birds, shaped like a birds" /></p>
 
                 </div>
 
@@ -125,6 +126,20 @@
 
         <!-- Livereload script (if served using the cli tool) -->
         
+    <script type="text/javascript">
+        var socket = new WebSocket("ws://localhost:3001");
+        socket.onmessage = function (event) {
+            if (event.data === "reload") {
+                socket.close();
+                location.reload(true); // force reload from server (not from cache)
+            }
+        };
+
+        window.onbeforeunload = function() {
+            socket.close();
+        }
+    </script>
+
 
         
 

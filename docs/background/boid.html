@@ -184,6 +184,20 @@ It is a circle centered at the position of the boid and measured by a radius.</p
 
         <!-- Livereload script (if served using the cli tool) -->
         
+    <script type="text/javascript">
+        var socket = new WebSocket("ws://localhost:3001");
+        socket.onmessage = function (event) {
+            if (event.data === "reload") {
+                socket.close();
+                location.reload(true); // force reload from server (not from cache)
+            }
+        };
+
+        window.onbeforeunload = function() {
+            socket.close();
+        }
+    </script>
+
 
         
 
