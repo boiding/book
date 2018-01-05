@@ -38,4 +38,4 @@ d := p_{c} - p = (x_{c} - x, y_{c} - y)
 
 We can calculate the heading from this by taking the 
 [_arctangent_](https://en.wikipedia.org/wiki/Inverse_trigonometric_functions)
-; \\(\operatorname{atan}(\frac{y_{c} - y}{x_{c} - x})\\)
+; \\(\operatorname{arctan}(\frac{y_{c} - y}{x_{c} - x})\\)
