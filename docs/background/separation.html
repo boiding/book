@@ -94,18 +94,18 @@
                     <a class="header" href="separation.html#separation" id="separation"><h1>Separation</h1></a>
 <p><img src="image/separation.gif" alt="Separation; steering clear of budding boids" /></p>
 <p>One of the classic motivations for our boid is <em>separation</em>. Steer clear from
-your budding boids to minimize the chances of collisions.</p>
+your buddy boids to minimize the chances of collisions.</p>
 <a class="header" href="separation.html#calculation" id="calculation"><h2>Calculation</h2></a>
 <p>Let the position of our boids be given by a sequence of coordinates
 \(p_{1} = (x_{1}, y_{1}), p_{2} = (x_{2}, y_{2}), \ldots, p_{n} = (x_{n}, y_{n})\).</p>
-<p>We need to calculate the direction we see a boid is as seen from an different
+<p>We need to calculate the direction we see a boid in as seen from an different
 boid with position \(p = (x, y)\). The direction can be calculated by taking
 the difference of the position of the boid you are interested in and your own
 boid. I.e.</p>
 <p>\[
 d_{i} = p_{i} - p = (x_{i} - x, y_{i} - y)
 \]</p>
-<p>From the sequence of directions we can determine a sequence of headings taking
+<p>From the sequence of directions we can determine a sequence of headings by taking
 the
 <a href="https://en.wikipedia.org/wiki/Inverse_trigonometric_functions"><em>arctangent</em></a>.</p>
 <p>\[
