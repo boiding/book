@@ -14,7 +14,7 @@ simple we are going to restrict the movement of our boids to two dimensions.
 
 ## Characteristics
 In this section we will provide an high level overview of the characteristics of
-our boid. These pertain to the simulation we are going to before, but feel free
+our boid. These pertain to the simulation we are going to perform, but feel free
 to attribute other characteristics.
 
 ### Primary
@@ -23,7 +23,7 @@ can find them below.
 
 #### Position
 Maybe the most striking characteristic is the boids _position_. It keeps track
-of where the boid is. We describe it by two projects, i.e. the _x_ coordinate
+of where the boid is. We describe it by two projections, i.e. the _x_ coordinate
 and the _y_ coordinate.
 
 The world that the boids occupy wraps around on it self. This means that it
@@ -62,5 +62,5 @@ It ranges from 0 to 1 where 0 represents a total *inability* to change velocity
 and 1 represents the ability to instantly change course.
 
 #### Influence Sphere
-This is the area in which other boids are sensed an as a result interacted with.
+This is the area in which other boids are sensed and as a result interacted with.
 It is a circle centered at the position of the boid and measured by a radius.

@@ -51,6 +51,8 @@
 
         <!-- Custom JS script -->
         
+        <script type="text/javascript" src="src/js/widgets.js"></script>
+        
 
     </head>
     <body class="light">
@@ -123,14 +125,14 @@ returns.</p>
 simple we are going to restrict the movement of our boids to two dimensions.</p>
 <a class="header" href="print.html#characteristics" id="characteristics"><h2>Characteristics</h2></a>
 <p>In this section we will provide an high level overview of the characteristics of
-our boid. These pertain to the simulation we are going to before, but feel free
+our boid. These pertain to the simulation we are going to perform, but feel free
 to attribute other characteristics.</p>
 <a class="header" href="print.html#primary" id="primary"><h3>Primary</h3></a>
 <p>The primary characteristics are the characteristics that one can measure. You
 can find them below.</p>
 <a class="header" href="print.html#position" id="position"><h4>Position</h4></a>
 <p>Maybe the most striking characteristic is the boids <em>position</em>. It keeps track
-of where the boid is. We describe it by two projects, i.e. the <em>x</em> coordinate
+of where the boid is. We describe it by two projections, i.e. the <em>x</em> coordinate
 and the <em>y</em> coordinate.</p>
 <p>The world that the boids occupy wraps around on it self. This means that it
 doesn't have edges. If a boid moves off the right side of the world it enters on
@@ -161,7 +163,7 @@ intended speed. Changing course takes times and that is reflected in this value.
 It ranges from 0 to 1 where 0 represents a total <em>inability</em> to change velocity
 and 1 represents the ability to instantly change course.</p>
 <a class="header" href="print.html#influence sphere" id="influence sphere"><h4>Influence Sphere</h4></a>
-<p>This is the area in which other boids are sensed an as a result interacted with.
+<p>This is the area in which other boids are sensed and as a result interacted with.
 It is a circle centered at the position of the boid and measured by a radius.</p>
 <a class="header" href="print.html#separation" id="separation"><h1>Separation</h1></a>
 <p><img src="image/separation.gif" alt="Separation; steering clear of budding boids" /></p>
