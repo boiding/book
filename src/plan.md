@@ -13,8 +13,8 @@ If this sounds daunting, relax. We went to great lengths to make this a joyous,
 interesting and stimulating workshop.
 
 ## WLAN
-We setup a Wireless Local Area Network (WLAN) so that the computer participating
-in the workshop can find each other without a trouble. Look for a network with
+We setup a Wireless Local Area Network (WLAN) so that the computers participating
+in the workshop can find each other without trouble. Look for a network with
 the following credentials
 
 * SSID: **boiding_workshop**
@@ -28,12 +28,12 @@ Your web server should listen on **port 2643** which spells _boid_ on a phone's
 keypad. Your starter kits already make this happen.
 
 ## Register Your Server
-The workshop server should be come aware of your web server. Each start kit has
-a automated way to register itself. See the README in your starter kit how the
+The workshop server should become aware of your web server. Each starter kit has
+an automated way to register itself. See the README in your starter kit how the
 specific registration works.
 
 ## Teach Your Boids
-This is were you are able to shine. Teach your boids in a way you see fit. The
+This is were you are able to shine. Teach your boids in anyway you see fit. The
 README in the starter kit of your choice will point you in the right direction.
 
 ## Run The Server
