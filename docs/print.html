@@ -321,6 +321,21 @@ corresponding boid.</p>
   }
 }
 </code></pre>
+<a class="header" href="print.html#output" id="output"><h2>Output</h2></a>
+<p>Once you have calculated how your boids will behave, you can send your response
+back. It needs to contain the intended heading and speed of each and every boid
+in your flock.</p>
+<pre><code class="language-JSON">{
+  &quot;boid-a&quot;: {
+    &quot;heading&quot;: 1.2,
+    &quot;speed&quot;: 0.5
+  },
+  &quot;boid-b&quot;: {
+    &quot;heading&quot;: 1.0,
+    &quot;speed&quot;: 0.5
+  }
+}
+</code></pre>
 <a class="header" href="print.html#brain-1" id="brain-1"><h1>Brain</h1></a>
 <p>In this chapter we will focus on developing the brain. There is no particular
 order in which to develop the different parts of the brain. The background

@@ -24,3 +24,22 @@ corresponding boid.
   }
 }
 ```
+
+## Output
+Once you have calculated how your boids will behave, you can send your response
+back. It needs to contain the intended heading and speed of each and every boid
+in your flock.
+
+```JSON
+{
+  "boid-a": {
+    "heading": 1.2,
+    "speed": 0.5
+  },
+  "boid-b": {
+    "heading": 1.0,
+    "speed": 0.5
+  }
+}
+```
+
