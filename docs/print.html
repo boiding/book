@@ -302,6 +302,25 @@ decisions back as JSON.</p>
 <p>In this section we describe the <a href="https://www.json.org/">JSON</a> representation of
 the data that is sent to your web server, as well as the representation that is
 expected back.</p>
+<a class="header" href="print.html#input" id="input"><h2>Input</h2></a>
+<p>With the post to <code>/brain</code> you will get send JSON data representing your flock.
+The JSON is an object with boid names as properties. Each property describes the
+corresponding boid.</p>
+<pre><code class="language-JSON">{
+  &quot;boid-a&quot;: {
+    &quot;x&quot;: 0.0,
+    &quot;y&quot;: 0.0,
+    &quot;heading&quot;: 1.0,
+    &quot;speed&quot;: 0.3
+  },
+  &quot;boid-b&quot;: {
+    &quot;x&quot;: 1.0,
+    &quot;y&quot;: 2.0,
+    &quot;heading&quot;: 0.8,
+    &quot;speed&quot;: 0.5
+  }
+}
+</code></pre>
 <a class="header" href="print.html#brain-1" id="brain-1"><h1>Brain</h1></a>
 <p>In this chapter we will focus on developing the brain. There is no particular
 order in which to develop the different parts of the brain. The background
