@@ -15,6 +15,10 @@ to your web server. It should respond with a
 content.
 This will tell the workshop server your web server is still running.
 
+## `/world`
+Some details of the world, like how big it is, don't change that often. You will
+be informed of the relevant world data a post to this URL.
+
 ## `/brain`
 The workshop server needs to know how your boids are going to react to their
 environment. It will send a 
