@@ -3,6 +3,16 @@ In this section we describe the [JSON](https://www.json.org/) representation of
 the data that is sent to your web server, as well as the representation that is
 expected back.
 
+## World
+The world data send to you via the `/world` URL has the following format.
+
+```JSON
+{
+  "width": 640,
+  "height": 480
+}
+```
+
 ## Input
 With the post to `/brain` you will get send JSON data representing your flock.
 The JSON is an object with boid names as properties. Each property describes the

@@ -305,6 +305,13 @@ decisions back as JSON.</p>
 <p>In this section we describe the <a href="https://www.json.org/">JSON</a> representation of
 the data that is sent to your web server, as well as the representation that is
 expected back.</p>
+<a class="header" href="print.html#world-1" id="world-1"><h2>World</h2></a>
+<p>The world data send to you via the <code>/world</code> URL has the following format.</p>
+<pre><code class="language-JSON">{
+  &quot;width&quot;: 640,
+  &quot;height&quot;: 480
+}
+</code></pre>
 <a class="header" href="print.html#input" id="input"><h2>Input</h2></a>
 <p>With the post to <code>/brain</code> you will get send JSON data representing your flock.
 The JSON is an object with boid names as properties. Each property describes the
