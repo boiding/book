@@ -34,7 +34,7 @@ specific registration works.
 
 ## Teach Your Boids
 This is were you are able to shine. Teach your boids in anyway you see fit. The
-README in the starter kit of your choice will point you in the right direction.
+chapter about the brain will point you in the right direction.
 
 ## Run The Server
 Running your server allows your boids to roam free in their habitat and follow
