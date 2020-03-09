@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Boid - Boiding</title>
+        <title>Key Ideas - Boiding</title>
         
 
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
@@ -81,7 +81,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="affix"><a href="../boiding.html">Boiding</a></li><li><a href="../expect.html"><strong aria-hidden="true">1.</strong> What to expect</a></li><li><a href="../background.html"><strong aria-hidden="true">2.</strong> Background</a></li><li><ol class="section"><li><a href="../background/boid.html" class="active"><strong aria-hidden="true">2.1.</strong> Boid</a></li><li><a href="../background/key.html"><strong aria-hidden="true">2.2.</strong> Key Ideas</a></li><li><a href="../background/separation.html"><strong aria-hidden="true">2.3.</strong> Separation</a></li><li><a href="../background/alignment.html"><strong aria-hidden="true">2.4.</strong> Alignment</a></li><li><a href="../background/cohesion.html"><strong aria-hidden="true">2.5.</strong> Cohesion</a></li></ol></li><li><a href="../plan.html"><strong aria-hidden="true">3.</strong> Plan</a></li><li><a href="../server.html"><strong aria-hidden="true">4.</strong> Web Server</a></li><li><ol class="section"><li><a href="../server/responsibilities.html"><strong aria-hidden="true">4.1.</strong> Responsibilities</a></li><li><a href="../server/representation.html"><strong aria-hidden="true">4.2.</strong> Representation</a></li></ol></li><li><a href="../brain.html"><strong aria-hidden="true">5.</strong> Brain</a></li><li><ol class="section"><li><a href="../brain/separation.html"><strong aria-hidden="true">5.1.</strong> Separation</a></li><li><a href="../brain/alignment.html"><strong aria-hidden="true">5.2.</strong> Alignment</a></li><li><a href="../brain/cohesion.html"><strong aria-hidden="true">5.3.</strong> Cohesion</a></li></ol></li></ol>
+                <ol class="chapter"><li class="affix"><a href="../boiding.html">Boiding</a></li><li><a href="../expect.html"><strong aria-hidden="true">1.</strong> What to expect</a></li><li><a href="../background.html"><strong aria-hidden="true">2.</strong> Background</a></li><li><ol class="section"><li><a href="../background/boid.html"><strong aria-hidden="true">2.1.</strong> Boid</a></li><li><a href="../background/key.html" class="active"><strong aria-hidden="true">2.2.</strong> Key Ideas</a></li><li><a href="../background/separation.html"><strong aria-hidden="true">2.3.</strong> Separation</a></li><li><a href="../background/alignment.html"><strong aria-hidden="true">2.4.</strong> Alignment</a></li><li><a href="../background/cohesion.html"><strong aria-hidden="true">2.5.</strong> Cohesion</a></li></ol></li><li><a href="../plan.html"><strong aria-hidden="true">3.</strong> Plan</a></li><li><a href="../server.html"><strong aria-hidden="true">4.</strong> Web Server</a></li><li><ol class="section"><li><a href="../server/responsibilities.html"><strong aria-hidden="true">4.1.</strong> Responsibilities</a></li><li><a href="../server/representation.html"><strong aria-hidden="true">4.2.</strong> Representation</a></li></ol></li><li><a href="../brain.html"><strong aria-hidden="true">5.</strong> Brain</a></li><li><ol class="section"><li><a href="../brain/separation.html"><strong aria-hidden="true">5.1.</strong> Separation</a></li><li><a href="../brain/alignment.html"><strong aria-hidden="true">5.2.</strong> Alignment</a></li><li><a href="../brain/cohesion.html"><strong aria-hidden="true">5.3.</strong> Cohesion</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -148,83 +148,31 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1><a class="header" href="#boid" id="boid">Boid</a></h1>
-<p>A <em>boid</em> is a virtual creatures, much like a bird or a fish. You should get
-attached to it, because we are going to spend a lot of time with them. We are
-going to teach our boids how to move gracefully among their siblings.</p>
-<p>You might not know it, but you have probably seen our friends before. If you are
-familiar with movies like <em>The Lion King</em> or <em>Batman Returns</em>, you have seen
-boids before. In The Lion King the stampede of wildebeests was created with a
-boids algorithm. The bats and also the penguins were similarly modeled in Batman
-Returns.</p>
-<p>Although the original boids moved in a three dimensional world, to keep things
-simple we are going to restrict the movement of our boids to two dimensions.</p>
-<h2><a class="header" href="#characteristics" id="characteristics">Characteristics</a></h2>
-<p>In this section we will provide an high level overview of the characteristics of
-our boid. These pertain to the simulation we are going to perform, but feel free
-to attribute other characteristics.</p>
-<h3><a class="header" href="#primary" id="primary">Primary</a></h3>
-<p>The primary characteristics are the characteristics that one can measure. You
-can find them below.</p>
-<h4><a class="header" href="#position" id="position">Position</a></h4>
-<p>Maybe the most striking characteristic is the boids <em>position</em>. It keeps track
-of where the boid is. We describe it by two projections, i.e. the <em>x</em> coordinate
-and the <em>y</em> coordinate.</p>
-<p>The world that the boids occupy wraps around on it self. This means that it
-doesn't have edges. If a boid moves off the right side of the world it enters on
-the left side of the world and vice versa. Similar for the top and bottom of the
-world.</p>
-<p>We have made sure that the coordinates are normalized. The values it can attain
-will all lie between 0 and 1. E.g. a boid with an <em>x</em> value of 0 is found at the
-left side of the world, whereas a boid with an <em>x</em> value of 1 will find itself at 
-the right side of the world.</p>
-<p>Similarly, an <em>y</em> value of 0 corresponds with the top edge and an <em>y</em> value of 1
-corresponds with the bottom edge.</p>
-<h4><a class="header" href="#heading" id="heading">Heading</a></h4>
-<p>An other primary characteristic of a boid is its <em>heading</em>, i.e. The angle it is
-pointing in. These angles are measured in
-<a href="https://en.wikipedia.org/wiki/Radian">radians</a> and have a range of 
-\(-\pi\) to \(+\pi\). When the boid is pointing to the right she has a
-heading of 0.</p>
-<h4><a class="header" href="#speed" id="speed">Speed</a></h4>
-<p>The <em>speed</em> measures how fast the boid is going. Together with the heading this
-makes up the velocity.</p>
-<h3><a class="header" href="#secondary" id="secondary">Secondary</a></h3>
-<p>The secondary characteristics are used in the simulation, but are less apparent
-than the primary characteristic.</p>
-<h4><a class="header" href="#intended-heading" id="intended-heading">Intended Heading</a></h4>
-<p>This is the heading your boid would like to have. It could differ from the
-primary heading and is used to steer the boid in order to avoid collisions or
-signal preferred direction.</p>
-<h4><a class="header" href="#intended-speed" id="intended-speed">Intended Speed</a></h4>
-<p>Like the intended heading, this is the speed the boid would want to move in.</p>
-<h4><a class="header" href="#agility" id="agility">Agility</a></h4>
-<p>The <em>agility</em> determines how quickly the boid can go from the current heading 
-to the intended heading. Changing course takes times and that is reflected in
-this value.</p>
-<p>It ranges from 0 to 1 where 0 represents a total <em>inability</em> to change heading
-and 1 represents the ability to instantly change course.</p>
-<h4><a class="header" href="#acceleration" id="acceleration">Acceleration</a></h4>
-<p>What agility is for heading, acceleration is for speed. It determines how quickly
-a boid can change it's current speeds.</p>
-<p>Again, an acceleration of 0 corresponds with the inability to change speeds, whereas
-an acceleration of 1 corresponds with instantly changing speed.</p>
-<h4><a class="header" href="#influence-sphere" id="influence-sphere">Influence Sphere</a></h4>
-<p>This is the area in which other boids are sensed and as a result interacted with.
-It is a circle centered at the position of the boid and measured by a radius.</p>
+                        <h1><a class="header" href="#key-ideas" id="key-ideas">Key Ideas</a></h1>
+<p>The beauty of Reynolds boiding algorithm is that the complex organisation
+of a flock stems from a few local rules.</p>
+<p>There is no director instructing each bird what to do, but each bird determines
+for her self what to do. The consideration she is making is balancing the following
+driving factors</p>
+<ol>
+<li>Seperation</li>
+<li>Alignment</li>
+<li>Cohesion</li>
+</ol>
+<p>In the next chapters we will explain each of the different concepts.</p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
                         
-                            <a rel="prev" href="../background.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../background/boid.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
                         
 
                         
-                            <a rel="next" href="../background/key.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="../background/separation.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         
@@ -236,13 +184,13 @@ It is a circle centered at the position of the boid and measured by a radius.</p
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
                 
-                    <a href="../background.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a href="../background/boid.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
                 
 
                 
-                    <a href="../background/key.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a href="../background/separation.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
                 

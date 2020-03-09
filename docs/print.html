@@ -83,7 +83,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="affix"><a href="boiding.html">Boiding</a></li><li><a href="expect.html"><strong aria-hidden="true">1.</strong> What to expect</a></li><li><a href="background.html"><strong aria-hidden="true">2.</strong> Background</a></li><li><ol class="section"><li><a href="background/boid.html"><strong aria-hidden="true">2.1.</strong> Boid</a></li><li><a href="background/separation.html"><strong aria-hidden="true">2.2.</strong> Separation</a></li><li><a href="background/alignment.html"><strong aria-hidden="true">2.3.</strong> Alignment</a></li><li><a href="background/cohesion.html"><strong aria-hidden="true">2.4.</strong> Cohesion</a></li></ol></li><li><a href="plan.html"><strong aria-hidden="true">3.</strong> Plan</a></li><li><a href="server.html"><strong aria-hidden="true">4.</strong> Web Server</a></li><li><ol class="section"><li><a href="server/responsibilities.html"><strong aria-hidden="true">4.1.</strong> Responsibilities</a></li><li><a href="server/representation.html"><strong aria-hidden="true">4.2.</strong> Representation</a></li></ol></li><li><a href="brain.html"><strong aria-hidden="true">5.</strong> Brain</a></li><li><ol class="section"><li><a href="brain/separation.html"><strong aria-hidden="true">5.1.</strong> Separation</a></li><li><a href="brain/alignment.html"><strong aria-hidden="true">5.2.</strong> Alignment</a></li><li><a href="brain/cohesion.html"><strong aria-hidden="true">5.3.</strong> Cohesion</a></li></ol></li></ol>
+                <ol class="chapter"><li class="affix"><a href="boiding.html">Boiding</a></li><li><a href="expect.html"><strong aria-hidden="true">1.</strong> What to expect</a></li><li><a href="background.html"><strong aria-hidden="true">2.</strong> Background</a></li><li><ol class="section"><li><a href="background/boid.html"><strong aria-hidden="true">2.1.</strong> Boid</a></li><li><a href="background/key.html"><strong aria-hidden="true">2.2.</strong> Key Ideas</a></li><li><a href="background/separation.html"><strong aria-hidden="true">2.3.</strong> Separation</a></li><li><a href="background/alignment.html"><strong aria-hidden="true">2.4.</strong> Alignment</a></li><li><a href="background/cohesion.html"><strong aria-hidden="true">2.5.</strong> Cohesion</a></li></ol></li><li><a href="plan.html"><strong aria-hidden="true">3.</strong> Plan</a></li><li><a href="server.html"><strong aria-hidden="true">4.</strong> Web Server</a></li><li><ol class="section"><li><a href="server/responsibilities.html"><strong aria-hidden="true">4.1.</strong> Responsibilities</a></li><li><a href="server/representation.html"><strong aria-hidden="true">4.2.</strong> Representation</a></li></ol></li><li><a href="brain.html"><strong aria-hidden="true">5.</strong> Brain</a></li><li><ol class="section"><li><a href="brain/separation.html"><strong aria-hidden="true">5.1.</strong> Separation</a></li><li><a href="brain/alignment.html"><strong aria-hidden="true">5.2.</strong> Alignment</a></li><li><a href="brain/cohesion.html"><strong aria-hidden="true">5.3.</strong> Cohesion</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -249,6 +249,18 @@ an acceleration of 1 corresponds with instantly changing speed.</p>
 <h4><a class="header" href="#influence-sphere" id="influence-sphere">Influence Sphere</a></h4>
 <p>This is the area in which other boids are sensed and as a result interacted with.
 It is a circle centered at the position of the boid and measured by a radius.</p>
+<h1><a class="header" href="#key-ideas" id="key-ideas">Key Ideas</a></h1>
+<p>The beauty of Reynolds boiding algorithm is that the complex organisation
+of a flock stems from a few local rules.</p>
+<p>There is no director instructing each bird what to do, but each bird determines
+for her self what to do. The consideration she is making is balancing the following
+driving factors</p>
+<ol>
+<li>Seperation</li>
+<li>Alignment</li>
+<li>Cohesion</li>
+</ol>
+<p>In the next chapters we will explain each of the different concepts.</p>
 <h1><a class="header" href="#separation" id="separation">Separation</a></h1>
 <p><img src="background/image/separation.gif" alt="Separation; steering clear of budding boids" /></p>
 <p>One of the classic motivations for our boid is <em>separation</em>. Steer clear from

@@ -4,6 +4,7 @@
 - [What to expect](./expect.md)
 - [Background](./background.md)
     - [Boid](./background/boid.md)
+    - [Key Ideas](./background/key.md)
     - [Separation](./background/separation.md)
     - [Alignment](./background/alignment.md)
     - [Cohesion](./background/cohesion.md)
