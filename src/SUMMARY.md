@@ -8,6 +8,7 @@
     - [Separation](./background/separation.md)
     - [Alignment](./background/alignment.md)
     - [Cohesion](./background/cohesion.md)
+    - [Others](./background/others.md)
 - [Plan](./plan.md)
 - [Web Server](./server.md)
     - [Responsibilities](./server/responsibilities.md)

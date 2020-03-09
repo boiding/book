@@ -83,7 +83,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="affix"><a href="boiding.html">Boiding</a></li><li><a href="expect.html"><strong aria-hidden="true">1.</strong> What to expect</a></li><li><a href="background.html"><strong aria-hidden="true">2.</strong> Background</a></li><li><ol class="section"><li><a href="background/boid.html"><strong aria-hidden="true">2.1.</strong> Boid</a></li><li><a href="background/key.html"><strong aria-hidden="true">2.2.</strong> Key Ideas</a></li><li><a href="background/separation.html"><strong aria-hidden="true">2.3.</strong> Separation</a></li><li><a href="background/alignment.html"><strong aria-hidden="true">2.4.</strong> Alignment</a></li><li><a href="background/cohesion.html"><strong aria-hidden="true">2.5.</strong> Cohesion</a></li></ol></li><li><a href="plan.html"><strong aria-hidden="true">3.</strong> Plan</a></li><li><a href="server.html"><strong aria-hidden="true">4.</strong> Web Server</a></li><li><ol class="section"><li><a href="server/responsibilities.html"><strong aria-hidden="true">4.1.</strong> Responsibilities</a></li><li><a href="server/representation.html"><strong aria-hidden="true">4.2.</strong> Representation</a></li></ol></li><li><a href="brain.html"><strong aria-hidden="true">5.</strong> Brain</a></li><li><ol class="section"><li><a href="brain/separation.html"><strong aria-hidden="true">5.1.</strong> Separation</a></li><li><a href="brain/alignment.html"><strong aria-hidden="true">5.2.</strong> Alignment</a></li><li><a href="brain/cohesion.html"><strong aria-hidden="true">5.3.</strong> Cohesion</a></li></ol></li></ol>
+                <ol class="chapter"><li class="affix"><a href="boiding.html">Boiding</a></li><li><a href="expect.html"><strong aria-hidden="true">1.</strong> What to expect</a></li><li><a href="background.html"><strong aria-hidden="true">2.</strong> Background</a></li><li><ol class="section"><li><a href="background/boid.html"><strong aria-hidden="true">2.1.</strong> Boid</a></li><li><a href="background/key.html"><strong aria-hidden="true">2.2.</strong> Key Ideas</a></li><li><a href="background/separation.html"><strong aria-hidden="true">2.3.</strong> Separation</a></li><li><a href="background/alignment.html"><strong aria-hidden="true">2.4.</strong> Alignment</a></li><li><a href="background/cohesion.html"><strong aria-hidden="true">2.5.</strong> Cohesion</a></li><li><a href="background/others.html"><strong aria-hidden="true">2.6.</strong> Others</a></li></ol></li><li><a href="plan.html"><strong aria-hidden="true">3.</strong> Plan</a></li><li><a href="server.html"><strong aria-hidden="true">4.</strong> Web Server</a></li><li><ol class="section"><li><a href="server/responsibilities.html"><strong aria-hidden="true">4.1.</strong> Responsibilities</a></li><li><a href="server/representation.html"><strong aria-hidden="true">4.2.</strong> Representation</a></li></ol></li><li><a href="brain.html"><strong aria-hidden="true">5.</strong> Brain</a></li><li><ol class="section"><li><a href="brain/separation.html"><strong aria-hidden="true">5.1.</strong> Separation</a></li><li><a href="brain/alignment.html"><strong aria-hidden="true">5.2.</strong> Alignment</a></li><li><a href="brain/cohesion.html"><strong aria-hidden="true">5.3.</strong> Cohesion</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -334,6 +334,20 @@ d := p_{c} - p = (x_{c} - x, y_{c} - y)
 <p>We can calculate the heading from this by taking the 
 <a href="https://en.wikipedia.org/wiki/Inverse_trigonometric_functions"><em>arctangent</em></a>
 ; \(\operatorname{arctan}(\frac{y_{c} - y}{x_{c} - x})\)</p>
+<h1><a class="header" href="#others" id="others">Others</a></h1>
+<p>The key ideas of the boiding algorithm are</p>
+<ol>
+<li>Separation</li>
+<li>Alignment</li>
+<li>Cohesion</li>
+</ol>
+<p>But these do not have to be the only motivators.</p>
+<p>One could imagine that the boids prefer a certain heading over others,
+because it aligns them with a magnetic field.</p>
+<p>Or biods prefer a certain location, because it offers a wide variety of
+food.</p>
+<p>Whatever the back story, you are challenged to play with different kind
+of motivators and see how that changes the behavior of the boids.</p>
 <h1><a class="header" href="#plan" id="plan">Plan</a></h1>
 <p>We will go over the high level plan for this workshop. We will detail all the
 moving parts and how they interact.</p>
