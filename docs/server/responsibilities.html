@@ -149,7 +149,7 @@
                 <div id="content" class="content">
                     <main>
                         <h1><a class="header" href="#responsibilities" id="responsibilities">Responsibilities</a></h1>
-<p>Your web server has a couple of responsibilities. Besides forming the brain of
+<p>Your brain server has a couple of responsibilities. Besides forming the brain of
 your boids, it also needs to convince the workshop server it is operating within
 well established parameters.</p>
 <p>A lot of things can go wrong. And we need to check for those. One of the things
@@ -158,20 +158,17 @@ respond to a heartbeat request so we know you server is still participating.</p>
 <h2><a class="header" href="#heartbeat" id="heartbeat"><code>/heartbeat</code></a></h2>
 <p>The workshop server periodically will send a 
 <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/HEAD"><code>HEAD</code> request</a> 
-to your web server. It should respond with a
+to your brain server. It should respond with a
 <a href="https://httpstatuses.com/204"><code>204</code></a> indicating a successful request without
 content.
 This will tell the workshop server your web server is still running.</p>
-<h2><a class="header" href="#world" id="world"><code>/world</code></a></h2>
-<p>Some details of the world, like how big it is, don't change that often. You will
-be informed of the relevant world data a post to this URL.</p>
 <h2><a class="header" href="#brain" id="brain"><code>/brain</code></a></h2>
 <p>The workshop server needs to know how your boids are going to react to their
-environment. It will send a 
+environment and peers. It will send a 
 <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/POST"><code>POST</code> request</a>
-with your current flock as <a href="https://www.json.org/">JSON</a> data. Your web server
-should figure out what each boid in your flock want to do and send their
-decisions back as JSON.</p>
+with your current flock as <a href="https://www.json.org/">JSON</a> data. Your brain server
+should figure out the intent of each boid in your flock and send their intentions
+back as JSON.</p>
 <p>The workshop server will take your response and integrate that in the simulation.</p>
 
                     </main>
