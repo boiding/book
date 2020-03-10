@@ -1,44 +1,38 @@
 # Representation
 In this section we describe the [JSON](https://www.json.org/) representation of
-the data that is sent to your web server, as well as the representation that is
-expected back.
-
-## World
-The world data send to you via the `/world` URL has the following format.
-
-```JSON
-{
-  "width": 640,
-  "height": 480
-}
-```
+the data that is sent to your brain server, as well as the representation that it
+is expected back.
 
 ## Input
 With the post to `/brain` you will get send JSON data representing your flock.
-The JSON is an object with boid names as properties. Each property describes the
-corresponding boid.
+The JSON is an object with a field `boids`. Its value is an object that maps 
+boid names to their properties. Each property describes the corresponding boid.
+
+Below you can find an example.
 
 ```JSON
 {
-  "boid-a": {
-    "x": 0.0,
-    "y": 0.0,
-    "heading": 1.0,
-    "speed": 0.3
-  },
-  "boid-b": {
-    "x": 1.0,
-    "y": 2.0,
-    "heading": 0.8,
-    "speed": 0.5
+  "boids": {
+    "boid-a": {
+      "x": 0.1,
+      "y": 0.2,
+      "heading": 1.0,
+      "speed": 0.030
+    },
+    "boid-b": {
+      "x": 0.3,
+      "y": 0.5,
+      "heading": 0.8,
+      "speed": 0.005
+    }
   }
 }
 ```
 
 ## Output
-Once you have calculated how your boids will behave, you can send your response
-back. It needs to contain the intended heading and speed of each and every boid
-in your flock.
+Once you have calculated the intentions of your boids, you can send your response
+back. The response should map a boids name to its intended heading and speed. You do
+not have to include each and every boid in your flock, but this has the best result.
 
 ```JSON
 {

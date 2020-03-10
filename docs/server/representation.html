@@ -150,38 +150,34 @@
                     <main>
                         <h1><a class="header" href="#representation" id="representation">Representation</a></h1>
 <p>In this section we describe the <a href="https://www.json.org/">JSON</a> representation of
-the data that is sent to your web server, as well as the representation that is
-expected back.</p>
-<h2><a class="header" href="#world" id="world">World</a></h2>
-<p>The world data send to you via the <code>/world</code> URL has the following format.</p>
-<pre><code class="language-JSON">{
-  &quot;width&quot;: 640,
-  &quot;height&quot;: 480
-}
-</code></pre>
+the data that is sent to your brain server, as well as the representation that it
+is expected back.</p>
 <h2><a class="header" href="#input" id="input">Input</a></h2>
 <p>With the post to <code>/brain</code> you will get send JSON data representing your flock.
-The JSON is an object with boid names as properties. Each property describes the
-corresponding boid.</p>
+The JSON is an object with a field <code>boids</code>. Its value is an object that maps 
+boid names to their properties. Each property describes the corresponding boid.</p>
+<p>Below you can find an example.</p>
 <pre><code class="language-JSON">{
-  &quot;boid-a&quot;: {
-    &quot;x&quot;: 0.0,
-    &quot;y&quot;: 0.0,
-    &quot;heading&quot;: 1.0,
-    &quot;speed&quot;: 0.3
-  },
-  &quot;boid-b&quot;: {
-    &quot;x&quot;: 1.0,
-    &quot;y&quot;: 2.0,
-    &quot;heading&quot;: 0.8,
-    &quot;speed&quot;: 0.5
+  &quot;boids&quot;: {
+    &quot;boid-a&quot;: {
+      &quot;x&quot;: 0.1,
+      &quot;y&quot;: 0.2,
+      &quot;heading&quot;: 1.0,
+      &quot;speed&quot;: 0.030
+    },
+    &quot;boid-b&quot;: {
+      &quot;x&quot;: 0.3,
+      &quot;y&quot;: 0.5,
+      &quot;heading&quot;: 0.8,
+      &quot;speed&quot;: 0.005
+    }
   }
 }
 </code></pre>
 <h2><a class="header" href="#output" id="output">Output</a></h2>
-<p>Once you have calculated how your boids will behave, you can send your response
-back. It needs to contain the intended heading and speed of each and every boid
-in your flock.</p>
+<p>Once you have calculated the intentions of your boids, you can send your response
+back. The response should map a boids name to its intended heading and speed. You do
+not have to include each and every boid in your flock, but this has the best result.</p>
 <pre><code class="language-JSON">{
   &quot;boid-a&quot;: {
     &quot;heading&quot;: 1.2,
