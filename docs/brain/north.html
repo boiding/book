@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>First Flight - Boiding</title>
+        <title>Due North - Boiding</title>
         
 
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
@@ -81,7 +81,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="affix"><a href="../boiding.html">Boiding</a></li><li><a href="../expect.html"><strong aria-hidden="true">1.</strong> What to expect</a></li><li><a href="../background.html"><strong aria-hidden="true">2.</strong> Background</a></li><li><ol class="section"><li><a href="../background/boid.html"><strong aria-hidden="true">2.1.</strong> Boid</a></li><li><a href="../background/key.html"><strong aria-hidden="true">2.2.</strong> Key Ideas</a></li><li><a href="../background/separation.html"><strong aria-hidden="true">2.3.</strong> Separation</a></li><li><a href="../background/alignment.html"><strong aria-hidden="true">2.4.</strong> Alignment</a></li><li><a href="../background/cohesion.html"><strong aria-hidden="true">2.5.</strong> Cohesion</a></li><li><a href="../background/others.html"><strong aria-hidden="true">2.6.</strong> Others</a></li></ol></li><li><a href="../plan.html"><strong aria-hidden="true">3.</strong> Plan</a></li><li><a href="../server.html"><strong aria-hidden="true">4.</strong> Web Server</a></li><li><ol class="section"><li><a href="../server/responsibilities.html"><strong aria-hidden="true">4.1.</strong> Responsibilities</a></li><li><a href="../server/representation.html"><strong aria-hidden="true">4.2.</strong> Representation</a></li></ol></li><li><a href="../brain.html"><strong aria-hidden="true">5.</strong> Brain</a></li><li><ol class="section"><li><a href="../brain/birth.html"><strong aria-hidden="true">5.1.</strong> Birth</a></li><li><a href="../brain/system.html"><strong aria-hidden="true">5.2.</strong> System Check</a></li><li><a href="../brain/first.html" class="active"><strong aria-hidden="true">5.3.</strong> First Flight</a></li><li><a href="../brain/north.html"><strong aria-hidden="true">5.4.</strong> Due North</a></li><li><a href="../brain/separation.html"><strong aria-hidden="true">5.5.</strong> Separation</a></li><li><a href="../brain/alignment.html"><strong aria-hidden="true">5.6.</strong> Alignment</a></li><li><a href="../brain/cohesion.html"><strong aria-hidden="true">5.7.</strong> Cohesion</a></li></ol></li></ol>
+                <ol class="chapter"><li class="affix"><a href="../boiding.html">Boiding</a></li><li><a href="../expect.html"><strong aria-hidden="true">1.</strong> What to expect</a></li><li><a href="../background.html"><strong aria-hidden="true">2.</strong> Background</a></li><li><ol class="section"><li><a href="../background/boid.html"><strong aria-hidden="true">2.1.</strong> Boid</a></li><li><a href="../background/key.html"><strong aria-hidden="true">2.2.</strong> Key Ideas</a></li><li><a href="../background/separation.html"><strong aria-hidden="true">2.3.</strong> Separation</a></li><li><a href="../background/alignment.html"><strong aria-hidden="true">2.4.</strong> Alignment</a></li><li><a href="../background/cohesion.html"><strong aria-hidden="true">2.5.</strong> Cohesion</a></li><li><a href="../background/others.html"><strong aria-hidden="true">2.6.</strong> Others</a></li></ol></li><li><a href="../plan.html"><strong aria-hidden="true">3.</strong> Plan</a></li><li><a href="../server.html"><strong aria-hidden="true">4.</strong> Web Server</a></li><li><ol class="section"><li><a href="../server/responsibilities.html"><strong aria-hidden="true">4.1.</strong> Responsibilities</a></li><li><a href="../server/representation.html"><strong aria-hidden="true">4.2.</strong> Representation</a></li></ol></li><li><a href="../brain.html"><strong aria-hidden="true">5.</strong> Brain</a></li><li><ol class="section"><li><a href="../brain/birth.html"><strong aria-hidden="true">5.1.</strong> Birth</a></li><li><a href="../brain/system.html"><strong aria-hidden="true">5.2.</strong> System Check</a></li><li><a href="../brain/first.html"><strong aria-hidden="true">5.3.</strong> First Flight</a></li><li><a href="../brain/north.html" class="active"><strong aria-hidden="true">5.4.</strong> Due North</a></li><li><a href="../brain/separation.html"><strong aria-hidden="true">5.5.</strong> Separation</a></li><li><a href="../brain/alignment.html"><strong aria-hidden="true">5.6.</strong> Alignment</a></li><li><a href="../brain/cohesion.html"><strong aria-hidden="true">5.7.</strong> Cohesion</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -148,38 +148,50 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1><a class="header" href="#first-flight" id="first-flight">First Flight</a></h1>
-<p>Orienting your boids is great and all. But boids are meant to fly!</p>
-<p>We are going to make a tiny change to the intent of our boids. Instead
-of staying in one spot, the intent should be to go, albeit slowly. A nice
-speed to start out with is <code>0.005</code>. Adopt your intention accordingly</p>
+                        <h1><a class="header" href="#due-north" id="due-north">Due North</a></h1>
+<p>Currently your boids are heading due east. Let's change direction and 
+head due North.</p>
+<p>For this you need to understand <a href="https://en.wikipedia.org/wiki/Radian"><em>radians</em></a>. Radians is a way to measure angles.
+Maybe you are more familiar with degrees. Radians are similar but have a different
+scale. </p>
+<p><img src="../image/degree-radian.svg" alt="Protractor in degrees and radians" /></p>
+<p>On the inside of this protractor there are <em>degrees</em>. On the outside are <em>radians</em>.
+Take special note of the symbols around the outside. E.g. at 180 degrees we are also
+at \(\pi\) radians.</p>
+<p>Your boids use radians to signal their intended heading, but with a slightly different
+convention. In stead of measuring angles from \(0\) to \(\pi\), they are measured
+from \(-\pi\) to \(\pi\). This does not differ for the upper halve of the protractor.</p>
+<p>Take a look at the protractor and try to find 270 degrees. According to the protractor
+this corresponds with \(3\frac{\pi}{2}\) radians. Our boids would call that
+\(-\frac{\pi}{2}\).</p>
+<h2><a class="header" href="#intention" id="intention">Intention</a></h2>
+<p>Let's make our boids head due north Figure out what the number of radians corresponds
+with heading due north. You could use the protractor, bribe the workshop leaders or
+ask around.</p>
+<p>Once you found the value, let's say it is <code>1.5707963267948966</code>, go ahead and change
+the intended heading</p>
 <pre><code class="language-json">{
-    &quot;heading&quot;: 0.0,
-    &quot;speed&quot;: 0.005,
+    &quot;heading&quot;: 1.5707963267948966,
+    &quot;speed&quot;: 0.005
 }
 </code></pre>
-<p>Restart your brain server and see them go.</p>
-<p><img src="../image/first_flight.png" alt="The first flight of your boids" /></p>
+<p>Your boids should change direction and head due north.</p>
+<p><img src="../image/due_north.png" alt="Boids heading due north" /></p>
 <h2><a class="header" href="#experimentation" id="experimentation">Experimentation</a></h2>
-<p>Experiment with the speed and try different values. What do you experience?</p>
-<p>Maybe you figured out that the speed of the boids is bounded. The boids are
-capable of going faster than a certain limit.</p>
-<p>The initial speed of <code>0.005</code>, or something close, works very well. So change
-the speed value of your boids intent back to that value and let's head in an
-other direction.</p>
+<p>Try different angles and see how your boids change their heading.</p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
                         
-                            <a rel="prev" href="../brain/system.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../brain/first.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
                         
 
                         
-                            <a rel="next" href="../brain/north.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="../brain/separation.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         
@@ -191,13 +203,13 @@ other direction.</p>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
                 
-                    <a href="../brain/system.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a href="../brain/first.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
                 
 
                 
-                    <a href="../brain/north.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a href="../brain/separation.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
                 
