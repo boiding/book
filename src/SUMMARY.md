@@ -14,6 +14,7 @@
     - [Responsibilities](./server/responsibilities.md)
     - [Representation](./server/representation.md)
 - [Brain](./brain.md)
+    - [Birth](./brain/birth.md)
     - [Separation](./brain/separation.md)
     - [Alignment](./brain/alignment.md)
     - [Cohesion](./brain/cohesion.md)
