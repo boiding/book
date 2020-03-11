@@ -83,7 +83,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="affix"><a href="boiding.html">Boiding</a></li><li><a href="expect.html"><strong aria-hidden="true">1.</strong> What to expect</a></li><li><a href="background.html"><strong aria-hidden="true">2.</strong> Background</a></li><li><ol class="section"><li><a href="background/boid.html"><strong aria-hidden="true">2.1.</strong> Boid</a></li><li><a href="background/key.html"><strong aria-hidden="true">2.2.</strong> Key Ideas</a></li><li><a href="background/separation.html"><strong aria-hidden="true">2.3.</strong> Separation</a></li><li><a href="background/alignment.html"><strong aria-hidden="true">2.4.</strong> Alignment</a></li><li><a href="background/cohesion.html"><strong aria-hidden="true">2.5.</strong> Cohesion</a></li><li><a href="background/others.html"><strong aria-hidden="true">2.6.</strong> Others</a></li></ol></li><li><a href="plan.html"><strong aria-hidden="true">3.</strong> Plan</a></li><li><a href="server.html"><strong aria-hidden="true">4.</strong> Web Server</a></li><li><ol class="section"><li><a href="server/responsibilities.html"><strong aria-hidden="true">4.1.</strong> Responsibilities</a></li><li><a href="server/representation.html"><strong aria-hidden="true">4.2.</strong> Representation</a></li></ol></li><li><a href="brain.html"><strong aria-hidden="true">5.</strong> Brain</a></li><li><ol class="section"><li><a href="brain/birth.html"><strong aria-hidden="true">5.1.</strong> Birth</a></li><li><a href="brain/system.html"><strong aria-hidden="true">5.2.</strong> System Check</a></li><li><a href="brain/first.html"><strong aria-hidden="true">5.3.</strong> First Flight</a></li><li><a href="brain/north.html"><strong aria-hidden="true">5.4.</strong> Due North</a></li><li><a href="brain/separation.html"><strong aria-hidden="true">5.5.</strong> Separation</a></li><li><a href="brain/alignment.html"><strong aria-hidden="true">5.6.</strong> Alignment</a></li><li><a href="brain/cohesion.html"><strong aria-hidden="true">5.7.</strong> Cohesion</a></li></ol></li></ol>
+                <ol class="chapter"><li class="affix"><a href="boiding.html">Boiding</a></li><li><a href="expect.html"><strong aria-hidden="true">1.</strong> What to expect</a></li><li><a href="background.html"><strong aria-hidden="true">2.</strong> Background</a></li><li><ol class="section"><li><a href="background/boid.html"><strong aria-hidden="true">2.1.</strong> Boid</a></li><li><a href="background/key.html"><strong aria-hidden="true">2.2.</strong> Key Ideas</a></li><li><a href="background/separation.html"><strong aria-hidden="true">2.3.</strong> Separation</a></li><li><a href="background/alignment.html"><strong aria-hidden="true">2.4.</strong> Alignment</a></li><li><a href="background/cohesion.html"><strong aria-hidden="true">2.5.</strong> Cohesion</a></li><li><a href="background/others.html"><strong aria-hidden="true">2.6.</strong> Others</a></li></ol></li><li><a href="plan.html"><strong aria-hidden="true">3.</strong> Plan</a></li><li><a href="server.html"><strong aria-hidden="true">4.</strong> Web Server</a></li><li><ol class="section"><li><a href="server/responsibilities.html"><strong aria-hidden="true">4.1.</strong> Responsibilities</a></li><li><a href="server/representation.html"><strong aria-hidden="true">4.2.</strong> Representation</a></li></ol></li><li><a href="brain.html"><strong aria-hidden="true">5.</strong> Brain</a></li><li><ol class="section"><li><a href="brain/birth.html"><strong aria-hidden="true">5.1.</strong> Birth</a></li><li><a href="brain/system.html"><strong aria-hidden="true">5.2.</strong> System Check</a></li><li><a href="brain/first.html"><strong aria-hidden="true">5.3.</strong> First Flight</a></li><li><a href="brain/north.html"><strong aria-hidden="true">5.4.</strong> Due North</a></li><li><a href="brain/circles.html"><strong aria-hidden="true">5.5.</strong> Going in Circles</a></li><li><a href="brain/separation.html"><strong aria-hidden="true">5.6.</strong> Separation</a></li><li><a href="brain/alignment.html"><strong aria-hidden="true">5.7.</strong> Alignment</a></li><li><a href="brain/cohesion.html"><strong aria-hidden="true">5.8.</strong> Cohesion</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -562,6 +562,29 @@ the intended heading</p>
 <p><img src="brain/../image/due_north.png" alt="Boids heading due north" /></p>
 <h2><a class="header" href="#experimentation-1" id="experimentation-1">Experimentation</a></h2>
 <p>Try different angles and see how your boids change their heading.</p>
+<h1><a class="header" href="#going-in-circles" id="going-in-circles">Going in Circles</a></h1>
+<p>You have played around with the intended heading of your boids, and
+noticed how they changed course. Let's try to make your boids go in
+circles, by changing intended heading periodically.</p>
+<p>So we want to change the heading of the boid slightly each time the
+brain server is requested to provide an intent. We can use the boid
+parameter that is passed to our function for that.</p>
+<p>We first introduce a variable that we can easily change called <code>delta</code>
+that will represent the amount of change in heading.
+Next we will set the intended heading to the boids current heading 
+with the sleight alteration.</p>
+<pre><code>delta := 1
+{
+    &quot;heading&quot;: boid.heading + delta,
+    &quot;speed&quot;: 0.005
+}
+</code></pre>
+<p><img src="brain/../image/circles.png" alt="Boids going in circles" /></p>
+<h2><a class="header" href="#experimentation-2" id="experimentation-2">Experimentation</a></h2>
+<p>Change the value of delta and see what happens. What do you notice?
+Even with very large values of delta, the boids do not make tighter circles.</p>
+<p>The reason for this is that the boids agility prevents them from instantly
+changing heading. So ultimatly the are limited by how dexterous the boids are.</p>
 <h1><a class="header" href="#separation-1" id="separation-1">Separation</a></h1>
 <h1><a class="header" href="#alignment-1" id="alignment-1">Alignment</a></h1>
 <h1><a class="header" href="#cohesion-1" id="cohesion-1">Cohesion</a></h1>

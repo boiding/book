@@ -18,6 +18,7 @@
     - [System Check](./brain/system.md)
     - [First Flight](./brain/first.md)
     - [Due North](./brain/north.md)
+    - [Going in Circles](./brain/circles.md)
     - [Separation](./brain/separation.md)
     - [Alignment](./brain/alignment.md)
     - [Cohesion](./brain/cohesion.md)

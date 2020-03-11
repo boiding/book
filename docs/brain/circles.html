@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Separation - Boiding</title>
+        <title>Going in Circles - Boiding</title>
         
 
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
@@ -81,7 +81,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="affix"><a href="../boiding.html">Boiding</a></li><li><a href="../expect.html"><strong aria-hidden="true">1.</strong> What to expect</a></li><li><a href="../background.html"><strong aria-hidden="true">2.</strong> Background</a></li><li><ol class="section"><li><a href="../background/boid.html"><strong aria-hidden="true">2.1.</strong> Boid</a></li><li><a href="../background/key.html"><strong aria-hidden="true">2.2.</strong> Key Ideas</a></li><li><a href="../background/separation.html" class="active"><strong aria-hidden="true">2.3.</strong> Separation</a></li><li><a href="../background/alignment.html"><strong aria-hidden="true">2.4.</strong> Alignment</a></li><li><a href="../background/cohesion.html"><strong aria-hidden="true">2.5.</strong> Cohesion</a></li><li><a href="../background/others.html"><strong aria-hidden="true">2.6.</strong> Others</a></li></ol></li><li><a href="../plan.html"><strong aria-hidden="true">3.</strong> Plan</a></li><li><a href="../server.html"><strong aria-hidden="true">4.</strong> Web Server</a></li><li><ol class="section"><li><a href="../server/responsibilities.html"><strong aria-hidden="true">4.1.</strong> Responsibilities</a></li><li><a href="../server/representation.html"><strong aria-hidden="true">4.2.</strong> Representation</a></li></ol></li><li><a href="../brain.html"><strong aria-hidden="true">5.</strong> Brain</a></li><li><ol class="section"><li><a href="../brain/birth.html"><strong aria-hidden="true">5.1.</strong> Birth</a></li><li><a href="../brain/system.html"><strong aria-hidden="true">5.2.</strong> System Check</a></li><li><a href="../brain/first.html"><strong aria-hidden="true">5.3.</strong> First Flight</a></li><li><a href="../brain/north.html"><strong aria-hidden="true">5.4.</strong> Due North</a></li><li><a href="../brain/circles.html"><strong aria-hidden="true">5.5.</strong> Going in Circles</a></li><li><a href="../brain/separation.html"><strong aria-hidden="true">5.6.</strong> Separation</a></li><li><a href="../brain/alignment.html"><strong aria-hidden="true">5.7.</strong> Alignment</a></li><li><a href="../brain/cohesion.html"><strong aria-hidden="true">5.8.</strong> Cohesion</a></li></ol></li></ol>
+                <ol class="chapter"><li class="affix"><a href="../boiding.html">Boiding</a></li><li><a href="../expect.html"><strong aria-hidden="true">1.</strong> What to expect</a></li><li><a href="../background.html"><strong aria-hidden="true">2.</strong> Background</a></li><li><ol class="section"><li><a href="../background/boid.html"><strong aria-hidden="true">2.1.</strong> Boid</a></li><li><a href="../background/key.html"><strong aria-hidden="true">2.2.</strong> Key Ideas</a></li><li><a href="../background/separation.html"><strong aria-hidden="true">2.3.</strong> Separation</a></li><li><a href="../background/alignment.html"><strong aria-hidden="true">2.4.</strong> Alignment</a></li><li><a href="../background/cohesion.html"><strong aria-hidden="true">2.5.</strong> Cohesion</a></li><li><a href="../background/others.html"><strong aria-hidden="true">2.6.</strong> Others</a></li></ol></li><li><a href="../plan.html"><strong aria-hidden="true">3.</strong> Plan</a></li><li><a href="../server.html"><strong aria-hidden="true">4.</strong> Web Server</a></li><li><ol class="section"><li><a href="../server/responsibilities.html"><strong aria-hidden="true">4.1.</strong> Responsibilities</a></li><li><a href="../server/representation.html"><strong aria-hidden="true">4.2.</strong> Representation</a></li></ol></li><li><a href="../brain.html"><strong aria-hidden="true">5.</strong> Brain</a></li><li><ol class="section"><li><a href="../brain/birth.html"><strong aria-hidden="true">5.1.</strong> Birth</a></li><li><a href="../brain/system.html"><strong aria-hidden="true">5.2.</strong> System Check</a></li><li><a href="../brain/first.html"><strong aria-hidden="true">5.3.</strong> First Flight</a></li><li><a href="../brain/north.html"><strong aria-hidden="true">5.4.</strong> Due North</a></li><li><a href="../brain/circles.html" class="active"><strong aria-hidden="true">5.5.</strong> Going in Circles</a></li><li><a href="../brain/separation.html"><strong aria-hidden="true">5.6.</strong> Separation</a></li><li><a href="../brain/alignment.html"><strong aria-hidden="true">5.7.</strong> Alignment</a></li><li><a href="../brain/cohesion.html"><strong aria-hidden="true">5.8.</strong> Cohesion</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -148,48 +148,42 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1><a class="header" href="#separation" id="separation">Separation</a></h1>
-<p><img src="../image/separation.gif" alt="Separation; steering clear of budding boids" /></p>
-<p>One of the classic motivations for our boid is <em>separation</em>. Steer clear from
-your buddy boids to minimize the chances of collisions.</p>
-<h2><a class="header" href="#calculation" id="calculation">Calculation</a></h2>
-<p>Let the position of our boids be given by a sequence of coordinates 
-\(p_{1} = (x_{1}, y_{1}), p_{2} = (x_{2}, y_{2}), \ldots, p_{n} = (x_{n}, y_{n})\).</p>
-<p>We need to calculate the direction we see a boid in as seen from an different
-boid with position \(p = (x, y)\). The direction can be calculated by taking
-the difference of the position of the boid you are interested in and your own
-boid. I.e.</p>
-<p>\[
-d_{i} = p_{i} - p = (x_{i} - x, y_{i} - y)
-\]</p>
-<p>From the sequence of directions we can determine a sequence of headings by taking
-the
-<a href="https://en.wikipedia.org/wiki/Inverse_trigonometric_functions"><em>arctangent</em></a>.</p>
-<p>\[
-h_{i} = \operatorname{arctan}\left(\frac{y_{i} - y}{x_{i} - x}\right)
-\]</p>
-<p>We would like to choose a heading that avoids all of the headings \(h_{i}\),
-if we want to avoid a collision.</p>
-<p>One way of doing this is averaging the headings and going in the opposite
-direction. The average can be calculated by</p>
-<p>\[
-h := \frac{1}{n} \sum_{i=1}^{n} h_{i}
-\]</p>
-<p>our target direction could be \(h + \pi\), normalized to lie within 
-\(\left(-\pi, \pi\right)\).</p>
+                        <h1><a class="header" href="#going-in-circles" id="going-in-circles">Going in Circles</a></h1>
+<p>You have played around with the intended heading of your boids, and
+noticed how they changed course. Let's try to make your boids go in
+circles, by changing intended heading periodically.</p>
+<p>So we want to change the heading of the boid slightly each time the
+brain server is requested to provide an intent. We can use the boid
+parameter that is passed to our function for that.</p>
+<p>We first introduce a variable that we can easily change called <code>delta</code>
+that will represent the amount of change in heading.
+Next we will set the intended heading to the boids current heading 
+with the sleight alteration.</p>
+<pre><code>delta := 1
+{
+    &quot;heading&quot;: boid.heading + delta,
+    &quot;speed&quot;: 0.005
+}
+</code></pre>
+<p><img src="../image/circles.png" alt="Boids going in circles" /></p>
+<h2><a class="header" href="#experimentation" id="experimentation">Experimentation</a></h2>
+<p>Change the value of delta and see what happens. What do you notice?
+Even with very large values of delta, the boids do not make tighter circles.</p>
+<p>The reason for this is that the boids agility prevents them from instantly
+changing heading. So ultimatly the are limited by how dexterous the boids are.</p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
                         
-                            <a rel="prev" href="../background/key.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../brain/north.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
                         
 
                         
-                            <a rel="next" href="../background/alignment.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="../brain/separation.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         
@@ -201,13 +195,13 @@ h := \frac{1}{n} \sum_{i=1}^{n} h_{i}
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
                 
-                    <a href="../background/key.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a href="../brain/north.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
                 
 
                 
-                    <a href="../background/alignment.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a href="../brain/separation.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
                 
