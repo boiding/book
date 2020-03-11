@@ -149,6 +149,24 @@
                 <div id="content" class="content">
                     <main>
                         <h1><a class="header" href="#first-flight" id="first-flight">First Flight</a></h1>
+<p>Orienting your boids is great and all. But boids are meant to fly!</p>
+<p>We are going to make a tiny change to the intent of our boids. Instead
+of staying in one spot, the intent should be to go, albeit slowly. A nice
+speed to start out with is <code>0.005</code>. Adopt your intention accordingly</p>
+<pre><code class="language-json">{
+    &quot;heading&quot;: 0.0,
+    &quot;speed&quot;: 0.005,
+}
+</code></pre>
+<p>Restart your brain server and see them go.</p>
+<p><img src="../image/first_flight.png" alt="The first flight of your boids" /></p>
+<h2><a class="header" href="#experimentation" id="experimentation">Experimentation</a></h2>
+<p>Experiment with the speed and try different values. What do you experience?</p>
+<p>Maybe you figured out that the speed of the boids is bounded. The boids are
+capable of going faster than a certain limit.</p>
+<p>The initial speed of <code>0.005</code>, or something close, works very well. So change
+the speed value of your boids intent back to that value and let's head in an
+other direction.</p>
 
                     </main>
 
