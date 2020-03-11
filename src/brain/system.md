@@ -14,3 +14,5 @@ To familiarize yourself with the API and code, respond with an intent of
 ```
 
 This should slowly stop the boids in their tracks and have them head due east.
+
+![System check; getting ready to head due east](../image/system_check.png)

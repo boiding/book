@@ -16,6 +16,7 @@
 - [Brain](./brain.md)
     - [Birth](./brain/birth.md)
     - [System Check](./brain/system.md)
+    - [First Flight](./brain/first.md)
     - [Separation](./brain/separation.md)
     - [Alignment](./brain/alignment.md)
     - [Cohesion](./brain/cohesion.md)
