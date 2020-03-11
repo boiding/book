@@ -15,6 +15,7 @@
     - [Representation](./server/representation.md)
 - [Brain](./brain.md)
     - [Birth](./brain/birth.md)
+    - [System Check](./brain/system.md)
     - [Separation](./brain/separation.md)
     - [Alignment](./brain/alignment.md)
     - [Cohesion](./brain/cohesion.md)
