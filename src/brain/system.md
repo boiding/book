@@ -12,3 +12,5 @@ To familiarize yourself with the API and code, respond with an intent of
     "speed": 0.0
 }
 ```
+
+This should slowly stop the boids in their tracks and have them head due east.
