@@ -6,7 +6,7 @@ care of.
 ## Communication
 An important part of the workshop is the simulation of multiple flocks of boids.
 This simulation is done by the _workshop server_. It keeps track of the different
-teams participating in the workshop. Each team has it's own flock of boids that
+teams participating in the workshop. Each team has its own flock of boids that
 they control.
 
 ![Communication between workshop server and brain server](image/communication.png)
@@ -14,9 +14,9 @@ they control.
 Each team will run a server that will determine how their flock behaves. This is the
 _brain server_.
 
-The workshop server will periodically send every teams brain server a request. In this
+The workshop server will periodically send every team's brain server a request. In this
 request the brain server will find a representation of their flock. The response that 
-the brain server will give it the intent of each boid. I.e. given this situation, what
+the brain server will give is the intent of each boid. I.e. given this situation, what
 would each of your boids in your flock do.
 
 You can find more details in the following chapters.

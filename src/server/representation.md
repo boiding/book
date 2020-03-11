@@ -31,7 +31,7 @@ Below you can find an example.
 
 ## Output
 Once you have calculated the intentions of your boids, you can send your response
-back. The response should map a boids name to its intended heading and speed. You do
+back. The response should map a boid's name to its intended heading and speed. You do
 not have to include each and every boid in your flock, but this has the best result.
 
 ```JSON

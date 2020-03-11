@@ -10,7 +10,7 @@ But these do not have to be the only motivators.
 One could imagine that the boids prefer a certain heading over others,
 because it aligns them with a magnetic field.
 
-Or biods prefer a certain location, because it offers a wide variety of
+Or boids prefer a certain location, because it offers a wide variety of
 food.
 
 Whatever the back story, you are challenged to play with different kind

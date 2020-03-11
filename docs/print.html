@@ -186,7 +186,7 @@ boid, we provide pseudo-code to illustrate the ideas in this chapter.</p>
 for these virtual creatures.</p>
 <p>A very readable but extensive reference is Craig Reynolds own page on the <a href="https://www.red3d.com/cwr/boids/">subject</a>.</p>
 <h1><a class="header" href="#boid" id="boid">Boid</a></h1>
-<p>A <em>boid</em> is a virtual creatures, much like a bird or a fish. You should get
+<p>A <em>boid</em> is a virtual creature, much like a bird or a fish. You should get
 attached to it, because we are going to spend a lot of time with them. We are
 going to teach our boids how to move gracefully among their siblings.</p>
 <p>You might not know it, but you have probably seen our friends before. If you are
@@ -218,7 +218,7 @@ the right side of the world.</p>
 <p>Similarly, an <em>y</em> value of 0 corresponds with the top edge and an <em>y</em> value of 1
 corresponds with the bottom edge.</p>
 <h4><a class="header" href="#heading" id="heading">Heading</a></h4>
-<p>An other primary characteristic of a boid is its <em>heading</em>, i.e. The angle it is
+<p>Another primary characteristic of a boid is its <em>heading</em>, i.e. The angle it is
 pointing in. These angles are measured in
 <a href="https://en.wikipedia.org/wiki/Radian">radians</a> and have a range of 
 \(-\pi\) to \(+\pi\). When the boid is pointing to the right she has a
@@ -256,7 +256,7 @@ of a flock stems from a few local rules.</p>
 for her self what to do. The consideration she is making is balancing the following
 driving factors</p>
 <ol>
-<li>Seperation</li>
+<li>Separation</li>
 <li>Alignment</li>
 <li>Cohesion</li>
 </ol>
@@ -344,7 +344,7 @@ d := p_{c} - p = (x_{c} - x, y_{c} - y)
 <p>But these do not have to be the only motivators.</p>
 <p>One could imagine that the boids prefer a certain heading over others,
 because it aligns them with a magnetic field.</p>
-<p>Or biods prefer a certain location, because it offers a wide variety of
+<p>Or boids prefer a certain location, because it offers a wide variety of
 food.</p>
 <p>Whatever the back story, you are challenged to play with different kind
 of motivators and see how that changes the behavior of the boids.</p>
@@ -389,14 +389,14 @@ care of.</p>
 <h2><a class="header" href="#communication" id="communication">Communication</a></h2>
 <p>An important part of the workshop is the simulation of multiple flocks of boids.
 This simulation is done by the <em>workshop server</em>. It keeps track of the different
-teams participating in the workshop. Each team has it's own flock of boids that
+teams participating in the workshop. Each team has its own flock of boids that
 they control.</p>
 <p><img src="image/communication.png" alt="Communication between workshop server and brain server" /></p>
 <p>Each team will run a server that will determine how their flock behaves. This is the
 <em>brain server</em>.</p>
-<p>The workshop server will periodically send every teams brain server a request. In this
+<p>The workshop server will periodically send every team's brain server a request. In this
 request the brain server will find a representation of their flock. The response that 
-the brain server will give it the intent of each boid. I.e. given this situation, what
+the brain server will give is the intent of each boid. I.e. given this situation, what
 would each of your boids in your flock do.</p>
 <p>You can find more details in the following chapters.</p>
 <h1><a class="header" href="#responsibilities" id="responsibilities">Responsibilities</a></h1>
@@ -449,7 +449,7 @@ boid names to their properties. Each property describes the corresponding boid.<
 </code></pre>
 <h2><a class="header" href="#output" id="output">Output</a></h2>
 <p>Once you have calculated the intentions of your boids, you can send your response
-back. The response should map a boids name to its intended heading and speed. You do
+back. The response should map a boid's name to its intended heading and speed. You do
 not have to include each and every boid in your flock, but this has the best result.</p>
 <pre><code class="language-JSON">{
   &quot;boid-a&quot;: {

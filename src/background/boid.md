@@ -1,5 +1,5 @@
 # Boid
-A _boid_ is a virtual creatures, much like a bird or a fish. You should get
+A _boid_ is a virtual creature, much like a bird or a fish. You should get
 attached to it, because we are going to spend a lot of time with them. We are
 going to teach our boids how to move gracefully among their siblings.
 
@@ -40,7 +40,7 @@ Similarly, an _y_ value of 0 corresponds with the top edge and an _y_ value of 1
 corresponds with the bottom edge.
 
 #### Heading
-An other primary characteristic of a boid is its _heading_, i.e. The angle it is
+Another primary characteristic of a boid is its _heading_, i.e. The angle it is
 pointing in. These angles are measured in
 [radians](https://en.wikipedia.org/wiki/Radian) and have a range of 
 \\(-\pi\\) to \\(+\pi\\). When the boid is pointing to the right she has a
