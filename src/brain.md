@@ -20,4 +20,20 @@ scheme. With your team mates, pick your favorite color, your favorite city, your
 favorite animal and string them together with dashes. E.g. `yellow-nijmegen-ant` or
 `blue-ibiza-flamingo`.
 
-With this scheme the visualisation on the big screen becomes more distinct.
+With this scheme the visualisation on the big screen becomes more distinct. If you need
+suggestions for good color names, take a look at some [color values][table] over at MDN.
+
+### The Big Screen
+Take a look at the big screen. If you succesfully registered your team, you should see
+your team in the right side column.
+
+## Brain Server
+Having registered is not the only step before you can start developing your boids brain.
+You also need to start your brain server. Again, with a start kit this should be described
+thoroughly.
+
+The workshop server will periodically check for a heartbeat on your brain server. You can
+see if your brain server is alive by looking for the connection symbol next to your team
+on the big screen.
+
+[table]: https://developer.mozilla.org/en-US/docs/Web/CSS/color_value
