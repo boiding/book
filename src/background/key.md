@@ -6,8 +6,8 @@ There is no director instructing each bird what to do, but each bird determines
 for her self what to do. The consideration she is making is balancing the following
 driving factors
 
-1. Separation
-2. Alignment
-3. Cohesion
+1. Alignment
+2. Cohesion
+3. Separation
 
 In the next chapters we will explain each of the different concepts.

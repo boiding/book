@@ -83,7 +83,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="affix"><a href="boiding.html">Boiding</a></li><li><a href="expect.html"><strong aria-hidden="true">1.</strong> What to expect</a></li><li><a href="background.html"><strong aria-hidden="true">2.</strong> Background</a></li><li><ol class="section"><li><a href="background/boid.html"><strong aria-hidden="true">2.1.</strong> Boid</a></li><li><a href="background/key.html"><strong aria-hidden="true">2.2.</strong> Key Ideas</a></li><li><a href="background/separation.html"><strong aria-hidden="true">2.3.</strong> Separation</a></li><li><a href="background/alignment.html"><strong aria-hidden="true">2.4.</strong> Alignment</a></li><li><a href="background/cohesion.html"><strong aria-hidden="true">2.5.</strong> Cohesion</a></li><li><a href="background/others.html"><strong aria-hidden="true">2.6.</strong> Others</a></li></ol></li><li><a href="plan.html"><strong aria-hidden="true">3.</strong> Plan</a></li><li><a href="server.html"><strong aria-hidden="true">4.</strong> Web Server</a></li><li><ol class="section"><li><a href="server/responsibilities.html"><strong aria-hidden="true">4.1.</strong> Responsibilities</a></li><li><a href="server/representation.html"><strong aria-hidden="true">4.2.</strong> Representation</a></li></ol></li><li><a href="brain.html"><strong aria-hidden="true">5.</strong> Brain</a></li><li><ol class="section"><li><a href="brain/birth.html"><strong aria-hidden="true">5.1.</strong> Birth</a></li><li><a href="brain/system.html"><strong aria-hidden="true">5.2.</strong> System Check</a></li><li><a href="brain/first.html"><strong aria-hidden="true">5.3.</strong> First Flight</a></li><li><a href="brain/north.html"><strong aria-hidden="true">5.4.</strong> Due North</a></li><li><a href="brain/circles.html"><strong aria-hidden="true">5.5.</strong> Going in Circles</a></li><li><a href="brain/separation.html"><strong aria-hidden="true">5.6.</strong> Separation</a></li><li><a href="brain/alignment.html"><strong aria-hidden="true">5.7.</strong> Alignment</a></li><li><a href="brain/cohesion.html"><strong aria-hidden="true">5.8.</strong> Cohesion</a></li></ol></li></ol>
+                <ol class="chapter"><li class="affix"><a href="boiding.html">Boiding</a></li><li><a href="expect.html"><strong aria-hidden="true">1.</strong> What to expect</a></li><li><a href="background.html"><strong aria-hidden="true">2.</strong> Background</a></li><li><ol class="section"><li><a href="background/boid.html"><strong aria-hidden="true">2.1.</strong> Boid</a></li><li><a href="background/key.html"><strong aria-hidden="true">2.2.</strong> Key Ideas</a></li><li><a href="background/alignment.html"><strong aria-hidden="true">2.3.</strong> Alignment</a></li><li><a href="background/cohesion.html"><strong aria-hidden="true">2.4.</strong> Cohesion</a></li><li><a href="background/separation.html"><strong aria-hidden="true">2.5.</strong> Separation</a></li><li><a href="background/others.html"><strong aria-hidden="true">2.6.</strong> Others</a></li></ol></li><li><a href="plan.html"><strong aria-hidden="true">3.</strong> Plan</a></li><li><a href="server.html"><strong aria-hidden="true">4.</strong> Web Server</a></li><li><ol class="section"><li><a href="server/responsibilities.html"><strong aria-hidden="true">4.1.</strong> Responsibilities</a></li><li><a href="server/representation.html"><strong aria-hidden="true">4.2.</strong> Representation</a></li></ol></li><li><a href="brain.html"><strong aria-hidden="true">5.</strong> Brain</a></li><li><ol class="section"><li><a href="brain/birth.html"><strong aria-hidden="true">5.1.</strong> Birth</a></li><li><a href="brain/system.html"><strong aria-hidden="true">5.2.</strong> System Check</a></li><li><a href="brain/first.html"><strong aria-hidden="true">5.3.</strong> First Flight</a></li><li><a href="brain/north.html"><strong aria-hidden="true">5.4.</strong> Due North</a></li><li><a href="brain/circles.html"><strong aria-hidden="true">5.5.</strong> Going in Circles</a></li><li><a href="brain/alignment.html"><strong aria-hidden="true">5.6.</strong> Alignment</a></li><li><a href="brain/cohesion.html"><strong aria-hidden="true">5.7.</strong> Cohesion</a></li><li><a href="brain/separation.html"><strong aria-hidden="true">5.8.</strong> Separation</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -256,44 +256,15 @@ of a flock stems from a few local rules.</p>
 for her self what to do. The consideration she is making is balancing the following
 driving factors</p>
 <ol>
-<li>Separation</li>
 <li>Alignment</li>
 <li>Cohesion</li>
+<li>Separation</li>
 </ol>
 <p>In the next chapters we will explain each of the different concepts.</p>
-<h1><a class="header" href="#separation" id="separation">Separation</a></h1>
-<p><img src="background/../image/separation.gif" alt="Separation; steering clear of budding boids" /></p>
-<p>One of the classic motivations for our boid is <em>separation</em>. Steer clear from
-your buddy boids to minimize the chances of collisions.</p>
-<h2><a class="header" href="#calculation" id="calculation">Calculation</a></h2>
-<p>Let the position of our boids be given by a sequence of coordinates 
-\(p_{1} = (x_{1}, y_{1}), p_{2} = (x_{2}, y_{2}), \ldots, p_{n} = (x_{n}, y_{n})\).</p>
-<p>We need to calculate the direction we see a boid in as seen from an different
-boid with position \(p = (x, y)\). The direction can be calculated by taking
-the difference of the position of the boid you are interested in and your own
-boid. I.e.</p>
-<p>\[
-d_{i} = p_{i} - p = (x_{i} - x, y_{i} - y)
-\]</p>
-<p>From the sequence of directions we can determine a sequence of headings by taking
-the
-<a href="https://en.wikipedia.org/wiki/Inverse_trigonometric_functions"><em>arctangent</em></a>.</p>
-<p>\[
-h_{i} = \operatorname{arctan}\left(\frac{y_{i} - y}{x_{i} - x}\right)
-\]</p>
-<p>We would like to choose a heading that avoids all of the headings \(h_{i}\),
-if we want to avoid a collision.</p>
-<p>One way of doing this is averaging the headings and going in the opposite
-direction. The average can be calculated by</p>
-<p>\[
-h := \frac{1}{n} \sum_{i=1}^{n} h_{i}
-\]</p>
-<p>our target direction could be \(h + \pi\), normalized to lie within 
-\(\left(-\pi, \pi\right)\).</p>
 <h1><a class="header" href="#alignment" id="alignment">Alignment</a></h1>
 <p><img src="background/../image/alignment.gif" alt="Try to fly in the same average heading of your cohort" /></p>
 <p>Aligning yourself in the average heading of your cohort is an other motivation.</p>
-<h2><a class="header" href="#calculation-1" id="calculation-1">Calculation</a></h2>
+<h2><a class="header" href="#calculation" id="calculation">Calculation</a></h2>
 <p>Instead of working on the position of our cohort of boids, we are working with
 the headings. Let the heading of our boids be given by a sequence
 \(h_{1}, h_{2},\ldots,h_{n}\).</p>
@@ -308,7 +279,7 @@ her cohort.</p>
 <p><img src="background/../image/cohesion.gif" alt="Surrounding yourself with budding boids increases survival chances." /></p>
 <p>Predators attack on the outside of your cohort. It motivates boids to move to
 the center of the flock. </p>
-<h2><a class="header" href="#calculation-2" id="calculation-2">Calculation</a></h2>
+<h2><a class="header" href="#calculation-1" id="calculation-1">Calculation</a></h2>
 <p>Let the position of our boids be given by a sequence of coordinates 
 \(p_{1} = (x_{1}, y_{1}), p_{2} = (x_{2}, y_{2}), \ldots, p_{n} = (x_{n}, y_{n})\).</p>
 <p>The <a href="https://en.wikipedia.org/wiki/Center_of_mass"><em>center of mass</em></a> is
@@ -334,6 +305,35 @@ d := p_{c} - p = (x_{c} - x, y_{c} - y)
 <p>We can calculate the heading from this by taking the 
 <a href="https://en.wikipedia.org/wiki/Inverse_trigonometric_functions"><em>arctangent</em></a>
 ; \(\operatorname{arctan}(\frac{y_{c} - y}{x_{c} - x})\)</p>
+<h1><a class="header" href="#separation" id="separation">Separation</a></h1>
+<p><img src="background/../image/separation.gif" alt="Separation; steering clear of budding boids" /></p>
+<p>One of the classic motivations for our boid is <em>separation</em>. Steer clear from
+your buddy boids to minimize the chances of collisions.</p>
+<h2><a class="header" href="#calculation-2" id="calculation-2">Calculation</a></h2>
+<p>Let the position of our boids be given by a sequence of coordinates 
+\(p_{1} = (x_{1}, y_{1}), p_{2} = (x_{2}, y_{2}), \ldots, p_{n} = (x_{n}, y_{n})\).</p>
+<p>We need to calculate the direction we see a boid in as seen from an different
+boid with position \(p = (x, y)\). The direction can be calculated by taking
+the difference of the position of the boid you are interested in and your own
+boid. I.e.</p>
+<p>\[
+d_{i} = p_{i} - p = (x_{i} - x, y_{i} - y)
+\]</p>
+<p>From the sequence of directions we can determine a sequence of headings by taking
+the
+<a href="https://en.wikipedia.org/wiki/Inverse_trigonometric_functions"><em>arctangent</em></a>.</p>
+<p>\[
+h_{i} = \operatorname{arctan}\left(\frac{y_{i} - y}{x_{i} - x}\right)
+\]</p>
+<p>We would like to choose a heading that avoids all of the headings \(h_{i}\),
+if we want to avoid a collision.</p>
+<p>One way of doing this is averaging the headings and going in the opposite
+direction. The average can be calculated by</p>
+<p>\[
+h := \frac{1}{n} \sum_{i=1}^{n} h_{i}
+\]</p>
+<p>our target direction could be \(h + \pi\), normalized to lie within 
+\(\left(-\pi, \pi\right)\).</p>
 <h1><a class="header" href="#others" id="others">Others</a></h1>
 <p>The key ideas of the boiding algorithm are</p>
 <ol>
@@ -585,9 +585,9 @@ with the sleight alteration.</p>
 Even with very large values of delta, the boids do not make tighter circles.</p>
 <p>The reason for this is that the boids agility prevents them from instantly
 changing heading. So ultimatly the are limited by how dexterous the boids are.</p>
-<h1><a class="header" href="#separation-1" id="separation-1">Separation</a></h1>
 <h1><a class="header" href="#alignment-1" id="alignment-1">Alignment</a></h1>
 <h1><a class="header" href="#cohesion-1" id="cohesion-1">Cohesion</a></h1>
+<h1><a class="header" href="#separation-1" id="separation-1">Separation</a></h1>
 
                     </main>
 
