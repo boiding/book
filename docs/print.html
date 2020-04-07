@@ -590,20 +590,20 @@ changing heading. So ultimatly the are limited by how dexterous the boids are.</
 <p>Your brain function is called with two arguments. The first you are already familiar with. It is the boid for which we are determining the behavior.</p>
 <p>The second argument is the flock. It maps a boid name to the corresponding name.</p>
 <p>The flock allows us to iterate over each boid and process it. Because we are going to do these multiple times, once for each motivator, we are creating a function that will return the alignment. This way we can add other motivators by writing more functions.</p>
-<p>So we start with the alignment function</p>
-<pre><code>begin alignment(flock)
+<p>So we start with the alignment function, which we will give the same interface as our brain function, so that we can easily combine things later.</p>
+<pre><code>begin alignment(boid, flock)
 
 end
 </code></pre>
 <p>To align our our individual boid with the flock, we need to figure out the average heading. We do this by calculating the sum of all headings and dividing by the total number of boids in the flock.</p>
 <pre><code>total
-for (_, boid) in flock begin
-    total += boid.heading
+for (_, b) in flock begin
+    total += b.heading
 end
 total/flock.size
 </code></pre>
 <p>We will integrate the alignment directly into the brain of our boids. For this we will introduce a variable for the intended heading, equating it with the alignment of the flock.</p>
-<pre><code>heading = alignment(flock)
+<pre><code>heading = alignment(boid, flock)
 {
     &quot;heading&quot;: heading,
     &quot;speed&quot;: 0.005
