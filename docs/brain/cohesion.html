@@ -149,6 +149,34 @@
                 <div id="content" class="content">
                     <main>
                         <h1><a class="header" href="#cohesion" id="cohesion">Cohesion</a></h1>
+<p>The next motivator that we are considering is <em>cohesion</em>, i.e. the tendency to stick together.</p>
+<p>We will create a function for this, just like we did for alignment. This allows us to easily switch things and combine them.</p>
+<pre><code>begin cohesion(boid, flock)
+
+end
+</code></pre>
+<p>The intend of  a biod is to go to the center of the flock, so we better should find the center first. We do this by calculating the average x and y component.</p>
+<pre><code>x
+y
+for b in flock begin
+    x += b.x
+    y += b.y
+end
+x = x/flock.size
+y = y/flock.size
+</code></pre>
+<p>This is the place we want to go. We now need to figure out which heading will bring us to that place. To go from where we are to where we want to go, we need to move <code>x - biod.x</code> along the x-axis and <code>y - boid.y</code> along the y axis.</p>
+<p>To find the corresponding heading we need to use the <a href="https://en.wikipedia.org/wiki/Inverse_trigonometric_functions">arctangent</a> in the following way.</p>
+<pre><code>arctangent(y-boid.y, x-boid.x)
+</code></pre>
+<p>In order to only see the effect of cohesion, change the implementation of the brain to.</p>
+<pre><code>heading = cohesion(boid, flock)
+{
+    &quot;heading&quot;: heading,
+    &quot;speed&quot;: 0.005
+}
+</code></pre>
+<p><img src="../image/cohesion.png" alt="A cohesive flock of birds" /></p>
 
                     </main>
 
