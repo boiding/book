@@ -641,6 +641,31 @@ y = y/flock.size
 </code></pre>
 <p><img src="brain/../image/cohesion.png" alt="A cohesive flock of birds" /></p>
 <h1><a class="header" href="#separation-1" id="separation-1">Separation</a></h1>
+<p>The final basic motivator is <em>separation</em>, i.e. avoiding each other, for fear of bumping into each other.</p>
+<p>With the experience gained by the other two motivators we will start by creating a separation function.</p>
+<pre><code>begin separation(boid, flock)
+
+end
+</code></pre>
+<p>We would like to know each heading that would bring us towards a flock member, and then avoid these headings. For the first part we can determine a list of headings first. We do have to make sure that we do not determine the heading with ourselfs.</p>
+<pre><code>headings = []
+for b in flock begin
+    if b &lt;&gt; boid then begin
+        h = arctangent(b.y - boid.y, b.x - boid.x)
+        headings.push(h)
+    end
+end
+</code></pre>
+<p>With all these headings we would like to go the opposite way. One way of doing that is to calculate the average heading, and add a heading of \(\pi\).</p>
+<pre><code>heading
+for h in headings begin
+    heading += h
+end
+heading/headings.size + PI
+</code></pre>
+<p><img src="brain/../image/separation.png" alt="Boids practicing social distancing" /></p>
+<h2><a class="header" href="#experimentation-3" id="experimentation-3">Experimentation</a></h2>
+<p>What other ways can you think of to avoid your flock mates?</p>
 
                     </main>
 
