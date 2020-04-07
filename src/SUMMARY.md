@@ -22,5 +22,6 @@
     - [Alignment](./brain/alignment.md)
     - [Cohesion](./brain/cohesion.md)
     - [Separation](./brain/separation.md)
+    - [Balance](./brain/balance.md)
 [Material](./material.md)
 [References](./references.md)
