@@ -81,7 +81,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="affix"><a href="../boiding.html">Boiding</a></li><li><a href="../expect.html"><strong aria-hidden="true">1.</strong> What to expect</a></li><li><a href="../background.html"><strong aria-hidden="true">2.</strong> Background</a></li><li><ol class="section"><li><a href="../background/boid.html"><strong aria-hidden="true">2.1.</strong> Boid</a></li><li><a href="../background/separation.html"><strong aria-hidden="true">2.2.</strong> Separation</a></li><li><a href="../background/alignment.html"><strong aria-hidden="true">2.3.</strong> Alignment</a></li><li><a href="../background/cohesion.html"><strong aria-hidden="true">2.4.</strong> Cohesion</a></li></ol></li><li><a href="../plan.html"><strong aria-hidden="true">3.</strong> Plan</a></li><li><a href="../server.html"><strong aria-hidden="true">4.</strong> Web Server</a></li><li><ol class="section"><li><a href="../server/responsibilities.html"><strong aria-hidden="true">4.1.</strong> Responsibilities</a></li><li><a href="../server/representation.html"><strong aria-hidden="true">4.2.</strong> Representation</a></li></ol></li><li><a href="../brain.html"><strong aria-hidden="true">5.</strong> Brain</a></li><li><ol class="section"><li><a href="../brain/separation.html"><strong aria-hidden="true">5.1.</strong> Separation</a></li><li><a href="../brain/alignment.html"><strong aria-hidden="true">5.2.</strong> Alignment</a></li><li><a href="../brain/cohesion.html" class="active"><strong aria-hidden="true">5.3.</strong> Cohesion</a></li></ol></li></ol>
+                <ol class="chapter"><li class="affix"><a href="../boiding.html">Boiding</a></li><li><a href="../expect.html"><strong aria-hidden="true">1.</strong> What to expect</a></li><li><a href="../background.html"><strong aria-hidden="true">2.</strong> Background</a></li><li><ol class="section"><li><a href="../background/boid.html"><strong aria-hidden="true">2.1.</strong> Boid</a></li><li><a href="../background/key.html"><strong aria-hidden="true">2.2.</strong> Key Ideas</a></li><li><a href="../background/alignment.html"><strong aria-hidden="true">2.3.</strong> Alignment</a></li><li><a href="../background/cohesion.html"><strong aria-hidden="true">2.4.</strong> Cohesion</a></li><li><a href="../background/separation.html"><strong aria-hidden="true">2.5.</strong> Separation</a></li><li><a href="../background/others.html"><strong aria-hidden="true">2.6.</strong> Others</a></li></ol></li><li><a href="../plan.html"><strong aria-hidden="true">3.</strong> Plan</a></li><li><a href="../server.html"><strong aria-hidden="true">4.</strong> Web Server</a></li><li><ol class="section"><li><a href="../server/responsibilities.html"><strong aria-hidden="true">4.1.</strong> Responsibilities</a></li><li><a href="../server/representation.html"><strong aria-hidden="true">4.2.</strong> Representation</a></li></ol></li><li><a href="../brain.html"><strong aria-hidden="true">5.</strong> Brain</a></li><li><ol class="section"><li><a href="../brain/birth.html"><strong aria-hidden="true">5.1.</strong> Birth</a></li><li><a href="../brain/system.html"><strong aria-hidden="true">5.2.</strong> System Check</a></li><li><a href="../brain/first.html"><strong aria-hidden="true">5.3.</strong> First Flight</a></li><li><a href="../brain/north.html"><strong aria-hidden="true">5.4.</strong> Due North</a></li><li><a href="../brain/circles.html"><strong aria-hidden="true">5.5.</strong> Going in Circles</a></li><li><a href="../brain/alignment.html"><strong aria-hidden="true">5.6.</strong> Alignment</a></li><li><a href="../brain/cohesion.html" class="active"><strong aria-hidden="true">5.7.</strong> Cohesion</a></li><li><a href="../brain/separation.html"><strong aria-hidden="true">5.8.</strong> Separation</a></li><li><a href="../brain/balance.html"><strong aria-hidden="true">5.9.</strong> Balance</a></li><li><a href="../brain/sphere.html"><strong aria-hidden="true">5.10.</strong> Sphere of influence</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -149,6 +149,34 @@
                 <div id="content" class="content">
                     <main>
                         <h1><a class="header" href="#cohesion" id="cohesion">Cohesion</a></h1>
+<p>The next motivator that we are considering is <em>cohesion</em>, i.e. the tendency to stick together.</p>
+<p>We will create a function for this, just like we did for alignment. This allows us to easily switch things and combine them.</p>
+<pre><code>begin cohesion(boid, flock)
+
+end
+</code></pre>
+<p>The intend of  a biod is to go to the center of the flock, so we better should find the center first. We do this by calculating the average x and y component.</p>
+<pre><code>x
+y
+for b in flock begin
+    x += b.x
+    y += b.y
+end
+x = x/flock.size
+y = y/flock.size
+</code></pre>
+<p>This is the place we want to go. We now need to figure out which heading will bring us to that place. To go from where we are to where we want to go, we need to move <code>x - biod.x</code> along the x-axis and <code>y - boid.y</code> along the y axis.</p>
+<p>To find the corresponding heading we need to use the <a href="https://en.wikipedia.org/wiki/Inverse_trigonometric_functions">arctangent</a> in the following way.</p>
+<pre><code>arctangent(y-boid.y, x-boid.x)
+</code></pre>
+<p>In order to only see the effect of cohesion, change the implementation of the brain to.</p>
+<pre><code>heading = cohesion(boid, flock)
+{
+    &quot;heading&quot;: heading,
+    &quot;speed&quot;: 0.005
+}
+</code></pre>
+<p><img src="../image/cohesion.png" alt="A cohesive flock of birds" /></p>
 
                     </main>
 
@@ -160,6 +188,10 @@
                             </a>
                         
 
+                        
+                            <a rel="next" href="../brain/separation.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
                         
 
                         <div style="clear: both"></div>
@@ -174,6 +206,10 @@
                     </a>
                 
 
+                
+                    <a href="../brain/separation.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
                 
             </nav>
 

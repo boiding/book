@@ -81,7 +81,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="affix"><a href="boiding.html">Boiding</a></li><li><a href="expect.html"><strong aria-hidden="true">1.</strong> What to expect</a></li><li><a href="background.html"><strong aria-hidden="true">2.</strong> Background</a></li><li><ol class="section"><li><a href="background/boid.html"><strong aria-hidden="true">2.1.</strong> Boid</a></li><li><a href="background/separation.html"><strong aria-hidden="true">2.2.</strong> Separation</a></li><li><a href="background/alignment.html"><strong aria-hidden="true">2.3.</strong> Alignment</a></li><li><a href="background/cohesion.html"><strong aria-hidden="true">2.4.</strong> Cohesion</a></li></ol></li><li><a href="plan.html"><strong aria-hidden="true">3.</strong> Plan</a></li><li><a href="server.html"><strong aria-hidden="true">4.</strong> Web Server</a></li><li><ol class="section"><li><a href="server/responsibilities.html"><strong aria-hidden="true">4.1.</strong> Responsibilities</a></li><li><a href="server/representation.html"><strong aria-hidden="true">4.2.</strong> Representation</a></li></ol></li><li><a href="brain.html" class="active"><strong aria-hidden="true">5.</strong> Brain</a></li><li><ol class="section"><li><a href="brain/separation.html"><strong aria-hidden="true">5.1.</strong> Separation</a></li><li><a href="brain/alignment.html"><strong aria-hidden="true">5.2.</strong> Alignment</a></li><li><a href="brain/cohesion.html"><strong aria-hidden="true">5.3.</strong> Cohesion</a></li></ol></li></ol>
+                <ol class="chapter"><li class="affix"><a href="boiding.html">Boiding</a></li><li><a href="expect.html"><strong aria-hidden="true">1.</strong> What to expect</a></li><li><a href="background.html"><strong aria-hidden="true">2.</strong> Background</a></li><li><ol class="section"><li><a href="background/boid.html"><strong aria-hidden="true">2.1.</strong> Boid</a></li><li><a href="background/key.html"><strong aria-hidden="true">2.2.</strong> Key Ideas</a></li><li><a href="background/alignment.html"><strong aria-hidden="true">2.3.</strong> Alignment</a></li><li><a href="background/cohesion.html"><strong aria-hidden="true">2.4.</strong> Cohesion</a></li><li><a href="background/separation.html"><strong aria-hidden="true">2.5.</strong> Separation</a></li><li><a href="background/others.html"><strong aria-hidden="true">2.6.</strong> Others</a></li></ol></li><li><a href="plan.html"><strong aria-hidden="true">3.</strong> Plan</a></li><li><a href="server.html"><strong aria-hidden="true">4.</strong> Web Server</a></li><li><ol class="section"><li><a href="server/responsibilities.html"><strong aria-hidden="true">4.1.</strong> Responsibilities</a></li><li><a href="server/representation.html"><strong aria-hidden="true">4.2.</strong> Representation</a></li></ol></li><li><a href="brain.html" class="active"><strong aria-hidden="true">5.</strong> Brain</a></li><li><ol class="section"><li><a href="brain/birth.html"><strong aria-hidden="true">5.1.</strong> Birth</a></li><li><a href="brain/system.html"><strong aria-hidden="true">5.2.</strong> System Check</a></li><li><a href="brain/first.html"><strong aria-hidden="true">5.3.</strong> First Flight</a></li><li><a href="brain/north.html"><strong aria-hidden="true">5.4.</strong> Due North</a></li><li><a href="brain/circles.html"><strong aria-hidden="true">5.5.</strong> Going in Circles</a></li><li><a href="brain/alignment.html"><strong aria-hidden="true">5.6.</strong> Alignment</a></li><li><a href="brain/cohesion.html"><strong aria-hidden="true">5.7.</strong> Cohesion</a></li><li><a href="brain/separation.html"><strong aria-hidden="true">5.8.</strong> Separation</a></li><li><a href="brain/balance.html"><strong aria-hidden="true">5.9.</strong> Balance</a></li><li><a href="brain/sphere.html"><strong aria-hidden="true">5.10.</strong> Sphere of influence</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -151,7 +151,32 @@
                         <h1><a class="header" href="#brain" id="brain">Brain</a></h1>
 <p>In this chapter we will focus on developing the brain. There is no particular
 order in which to develop the different parts of the brain. The background
-chapter will be used as inspiration for the different parts of the brain.</p>
+chapter will be used as inspiration  but feel free to plot your own course.</p>
+<p>In order to forego the tedium of creating a web server, we provided starter kits.
+This way you can dive in to the interesting part of developing the brain of
+your boids.</p>
+<p>Because of that we will describe the various parts in pseudo code.</p>
+<h2><a class="header" href="#registering" id="registering">Registering</a></h2>
+<p>But you the first thing to do is register you brain server to the workshop server. 
+Each starter kit provides a means of registering, so pick one of the provided starter
+kits and follow the instructions in the README.</p>
+<h3><a class="header" href="#naming" id="naming">Naming</a></h3>
+<p>One way to identify your flock is by team name. We propose to use the following naming
+scheme. With your team mates, pick your favorite color, your favorite city, your
+favorite animal and string them together with dashes. E.g. <code>yellow-nijmegen-ant</code> or
+<code>blue-ibiza-flamingo</code>.</p>
+<p>With this scheme the visualisation on the big screen becomes more distinct. If you need
+suggestions for good color names, take a look at some <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value">color values</a> over at MDN.</p>
+<h3><a class="header" href="#the-big-screen" id="the-big-screen">The Big Screen</a></h3>
+<p>Take a look at the big screen. If you succesfully registered your team, you should see
+your team in the right side column.</p>
+<h2><a class="header" href="#brain-server" id="brain-server">Brain Server</a></h2>
+<p>Having registered is not the only step before you can start developing your boids brain.
+You also need to start your brain server. Again, with a start kit this should be described
+thoroughly.</p>
+<p>The workshop server will periodically check for a heartbeat on your brain server. You can
+see if your brain server is alive by looking for the connection symbol next to your team
+on the big screen.</p>
 
                     </main>
 
@@ -164,7 +189,7 @@ chapter will be used as inspiration for the different parts of the brain.</p>
                         
 
                         
-                            <a rel="next" href="brain/separation.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="brain/birth.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         
@@ -182,7 +207,7 @@ chapter will be used as inspiration for the different parts of the brain.</p>
                 
 
                 
-                    <a href="brain/separation.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a href="brain/birth.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
                 

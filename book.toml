@@ -1,10 +1,13 @@
+[book]
 title = "Boiding"
 authors = ["Jan-Erik Rediger", "Daan van Berkel"]
 description = "A workbook for the boiding workshop"
+src = "src"
+lang = "en"
 
-source = "src"
+[build]
+build-dir = "docs"
 
 [output.html]
-destination = "docs"
 mathjax-support = true
 additional-js = ["src/js/widgets.js"]

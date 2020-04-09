@@ -1,5 +1,5 @@
 # Separation
-![Separation; steering clear of budding boids](image/separation.gif)
+![Separation; steering clear of budding boids](../image/separation.gif)
 
 One of the classic motivations for our boid is _separation_. Steer clear from
 your buddy boids to minimize the chances of collisions.
