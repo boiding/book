@@ -23,5 +23,6 @@
     - [Cohesion](./brain/cohesion.md)
     - [Separation](./brain/separation.md)
     - [Balance](./brain/balance.md)
+    - [Sphere of influence](./brain/sphere.md)
 [Material](./material.md)
 [References](./references.md)
