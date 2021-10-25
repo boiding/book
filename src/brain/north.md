@@ -13,7 +13,7 @@ Take special note of the symbols around the outside. E.g. at 180 degrees we are 
 at \\(\pi\\) radians.
 
 Your boids use radians to signal their intended heading, but with a slightly different
-convention. In stead of measuring angles from \\(0\\) to \\(\pi\\), they are measured
+convention. In stead of measuring angles from \\(0\\) to \\(2\pi\\), they are measured
 from \\(-\pi\\) to \\(\pi\\). This does not differ for the upper halve of the protractor.
 
 Take a look at the protractor and try to find 270 degrees. According to the protractor
@@ -21,7 +21,7 @@ this corresponds with \\(3\frac{\pi}{2}\\) radians. Our boids would call that
 \\(-\frac{\pi}{2}\\).
 
 ## Intention
-Let's make our boids head due north Figure out what the number of radians corresponds
+Let's make our boids head due north. Figure out what the number of radians corresponds
 with heading due north. You could use the protractor, bribe the workshop leaders or
 ask around.
 

@@ -10,7 +10,7 @@ your boids.
 Because of that we will describe the various parts in pseudo code.
 
 ## Registering
-But you the first thing to do is register you brain server to the workshop server. 
+But the first thing to do is register you brain server to the workshop server. 
 Each starter kit provides a means of registering, so pick one of the provided starter
 kits and follow the instructions in the README.
 

@@ -1,26 +1,40 @@
 <!DOCTYPE HTML>
-<html lang="en" class="sidebar-visible no-js">
+<html lang="en" class="sidebar-visible no-js light">
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
         <title>Brain - Boiding</title>
         
+        
+
+
+        <!-- Custom HTML head -->
+        
+
 
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="A workbook for the boiding workshop">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff" />
 
+        
+        <link rel="icon" href="favicon.svg">
+        
+        
         <link rel="shortcut icon" href="favicon.png">
+        
         <link rel="stylesheet" href="css/variables.css">
         <link rel="stylesheet" href="css/general.css">
         <link rel="stylesheet" href="css/chrome.css">
+        
         <link rel="stylesheet" href="css/print.css" media="print">
+        
 
         <!-- Fonts -->
         <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
-        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+        
+        <link rel="stylesheet" href="fonts/fonts.css">
+        
 
         <!-- Highlight.js Stylesheets -->
         <link rel="stylesheet" href="highlight.css">
@@ -35,11 +49,11 @@
         <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
         
     </head>
-    <body class="light">
+    <body>
         <!-- Provide site root to javascript -->
         <script type="text/javascript">
             var path_to_root = "";
-            var default_theme = "light";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
         </script>
 
         <!-- Work around some values being stored in localStorage wrapped in quotes -->
@@ -63,8 +77,11 @@
             var theme;
             try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
             if (theme === null || theme === undefined) { theme = default_theme; }
-            document.body.className = theme;
-            document.querySelector('html').className = theme + ' js';
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
         </script>
 
         <!-- Hide / unhide sidebar before it is displayed -->
@@ -81,7 +98,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="affix"><a href="boiding.html">Boiding</a></li><li><a href="expect.html"><strong aria-hidden="true">1.</strong> What to expect</a></li><li><a href="background.html"><strong aria-hidden="true">2.</strong> Background</a></li><li><ol class="section"><li><a href="background/boid.html"><strong aria-hidden="true">2.1.</strong> Boid</a></li><li><a href="background/key.html"><strong aria-hidden="true">2.2.</strong> Key Ideas</a></li><li><a href="background/alignment.html"><strong aria-hidden="true">2.3.</strong> Alignment</a></li><li><a href="background/cohesion.html"><strong aria-hidden="true">2.4.</strong> Cohesion</a></li><li><a href="background/separation.html"><strong aria-hidden="true">2.5.</strong> Separation</a></li><li><a href="background/others.html"><strong aria-hidden="true">2.6.</strong> Others</a></li></ol></li><li><a href="plan.html"><strong aria-hidden="true">3.</strong> Plan</a></li><li><a href="server.html"><strong aria-hidden="true">4.</strong> Web Server</a></li><li><ol class="section"><li><a href="server/responsibilities.html"><strong aria-hidden="true">4.1.</strong> Responsibilities</a></li><li><a href="server/representation.html"><strong aria-hidden="true">4.2.</strong> Representation</a></li></ol></li><li><a href="brain.html" class="active"><strong aria-hidden="true">5.</strong> Brain</a></li><li><ol class="section"><li><a href="brain/birth.html"><strong aria-hidden="true">5.1.</strong> Birth</a></li><li><a href="brain/system.html"><strong aria-hidden="true">5.2.</strong> System Check</a></li><li><a href="brain/first.html"><strong aria-hidden="true">5.3.</strong> First Flight</a></li><li><a href="brain/north.html"><strong aria-hidden="true">5.4.</strong> Due North</a></li><li><a href="brain/circles.html"><strong aria-hidden="true">5.5.</strong> Going in Circles</a></li><li><a href="brain/alignment.html"><strong aria-hidden="true">5.6.</strong> Alignment</a></li><li><a href="brain/cohesion.html"><strong aria-hidden="true">5.7.</strong> Cohesion</a></li><li><a href="brain/separation.html"><strong aria-hidden="true">5.8.</strong> Separation</a></li><li><a href="brain/balance.html"><strong aria-hidden="true">5.9.</strong> Balance</a></li><li><a href="brain/sphere.html"><strong aria-hidden="true">5.10.</strong> Sphere of influence</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="boiding.html">Boiding</a></li><li class="chapter-item expanded "><a href="expect.html"><strong aria-hidden="true">1.</strong> What to expect</a></li><li class="chapter-item expanded "><a href="background.html"><strong aria-hidden="true">2.</strong> Background</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="background/boid.html"><strong aria-hidden="true">2.1.</strong> Boid</a></li><li class="chapter-item expanded "><a href="background/key.html"><strong aria-hidden="true">2.2.</strong> Key Ideas</a></li><li class="chapter-item expanded "><a href="background/alignment.html"><strong aria-hidden="true">2.3.</strong> Alignment</a></li><li class="chapter-item expanded "><a href="background/cohesion.html"><strong aria-hidden="true">2.4.</strong> Cohesion</a></li><li class="chapter-item expanded "><a href="background/separation.html"><strong aria-hidden="true">2.5.</strong> Separation</a></li><li class="chapter-item expanded "><a href="background/others.html"><strong aria-hidden="true">2.6.</strong> Others</a></li></ol></li><li class="chapter-item expanded "><a href="plan.html"><strong aria-hidden="true">3.</strong> Plan</a></li><li class="chapter-item expanded "><a href="server.html"><strong aria-hidden="true">4.</strong> Web Server</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="server/responsibilities.html"><strong aria-hidden="true">4.1.</strong> Responsibilities</a></li><li class="chapter-item expanded "><a href="server/representation.html"><strong aria-hidden="true">4.2.</strong> Representation</a></li></ol></li><li class="chapter-item expanded "><a href="brain.html" class="active"><strong aria-hidden="true">5.</strong> Brain</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="brain/birth.html"><strong aria-hidden="true">5.1.</strong> Birth</a></li><li class="chapter-item expanded "><a href="brain/system.html"><strong aria-hidden="true">5.2.</strong> System Check</a></li><li class="chapter-item expanded "><a href="brain/first.html"><strong aria-hidden="true">5.3.</strong> First Flight</a></li><li class="chapter-item expanded "><a href="brain/north.html"><strong aria-hidden="true">5.4.</strong> Due North</a></li><li class="chapter-item expanded "><a href="brain/circles.html"><strong aria-hidden="true">5.5.</strong> Going in Circles</a></li><li class="chapter-item expanded "><a href="brain/alignment.html"><strong aria-hidden="true">5.6.</strong> Alignment</a></li><li class="chapter-item expanded "><a href="brain/cohesion.html"><strong aria-hidden="true">5.7.</strong> Cohesion</a></li><li class="chapter-item expanded "><a href="brain/separation.html"><strong aria-hidden="true">5.8.</strong> Separation</a></li><li class="chapter-item expanded "><a href="brain/balance.html"><strong aria-hidden="true">5.9.</strong> Balance</a></li><li class="chapter-item expanded "><a href="brain/sphere.html"><strong aria-hidden="true">5.10.</strong> Sphere of influence</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -90,37 +107,38 @@
 
             <div class="page">
                 
-                <div id="menu-bar" class="menu-bar">
-                    <div id="menu-bar-sticky-container">
-                        <div class="left-buttons">
-                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
-                                <i class="fa fa-bars"></i>
-                            </button>
-                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
-                                <i class="fa fa-paint-brush"></i>
-                            </button>
-                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
-                                <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
-                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
-                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
-                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
-                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
-                            </ul>
-                            
-                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
-                                <i class="fa fa-search"></i>
-                            </button>
-                            
-                        </div>
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
 
-                        <h1 class="menu-title">Boiding</h1>
+                    <h1 class="menu-title">Boiding</h1>
 
-                        <div class="right-buttons">
-                            <a href="print.html" title="Print this book" aria-label="Print this book">
-                                <i id="print-button" class="fa fa-print"></i>
-                            </a>
-                            
-                        </div>
+                    <div class="right-buttons">
+                        
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                        
                     </div>
                 </div>
 
@@ -157,7 +175,7 @@ This way you can dive in to the interesting part of developing the brain of
 your boids.</p>
 <p>Because of that we will describe the various parts in pseudo code.</p>
 <h2><a class="header" href="#registering" id="registering">Registering</a></h2>
-<p>But you the first thing to do is register you brain server to the workshop server. 
+<p>But the first thing to do is register you brain server to the workshop server. 
 Each starter kit provides a means of registering, so pick one of the provided starter
 kits and follow the instructions in the README.</p>
 <h3><a class="header" href="#naming" id="naming">Naming</a></h3>
@@ -201,13 +219,13 @@ on the big screen.</p>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
                 
-                    <a href="server/representation.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="server/representation.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
                 
 
                 
-                    <a href="brain/birth.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="brain/birth.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
                 
@@ -218,11 +236,11 @@ on the big screen.</p>
         
         <!-- Livereload script (if served using the cli tool) -->
         <script type="text/javascript">
-            var socket = new WebSocket("ws://localhost:3001");
+            var socket = new WebSocket("ws://localhost:3000/__livereload");
             socket.onmessage = function (event) {
                 if (event.data === "reload") {
                     socket.close();
-                    location.reload(true); // force reload from server (not from cache)
+                    location.reload();
                 }
             };
 
@@ -232,6 +250,14 @@ on the big screen.</p>
         </script>
         
 
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
         
 
         

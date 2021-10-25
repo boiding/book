@@ -42,7 +42,7 @@ begin sphere(boid, flock)
 end
 ```
 
-Note that this function is dependent on a `radius` parameter. A radius of approximatly `1.414` is the entire world. So pick something that trikes your fancy.
+Note that this function is dependent on a `radius` parameter. A radius of approximatly `1.414` is the entire world. So pick something that strikes your fancy.
 
 With this `sphere` function we can change the process function to
 

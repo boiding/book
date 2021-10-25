@@ -20,7 +20,7 @@ Restart your brain server and see them go.
 Experiment with the speed and try different values. What do you experience?
 
 Maybe you figured out that the speed of the boids is bounded. The boids are
-capable of going faster than a certain limit.
+not capable of going faster than a certain limit.
 
 The initial speed of `0.005`, or something close, works very well. So change
 the speed value of your boids intent back to that value and let's head in an
