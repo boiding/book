@@ -12,7 +12,7 @@ jobs:
       - name: Setup mdBook
         uses: peaceiris/actions-mdbook@v1
         with:
-          mdbook-version: 'latest'
+          mdbook-version: "latest"
 
       - run: mdbook build
 
@@ -22,3 +22,10 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./book
+
+      - name: Notify material of change
+        run: |
+          curl -X POST https://api.github.com/repos/boiding/material/dispatches \
+          -H 'Accept: application/vnd.github.everest-preview+json' \
+          -u ${{ secrets.ACCESS_TOKEN }} \
+          --data '{"event_type": "notification-of-change", "client_payload": { "repository": "'"$GITHUB_REPOSITORY"'" }}'
