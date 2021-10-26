@@ -6,7 +6,7 @@ src = "src"
 lang = "en"
 
 [build]
-build-dir = "docs"
+build-dir = "book"
 
 [output.html]
 mathjax-support = true
