@@ -1,6 +1,0 @@
-digraph communication {
-    a [label="workshop server", shape=box];
-    b [label="brain server", shape=box];
-    a -> b;
-    b -> a;
-}

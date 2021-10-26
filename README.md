@@ -17,13 +17,8 @@ mdbook build
 
 For more options see the [documentation][mdbook-docs] or run `mdbook --help`.
 
-### pre-commit hook
-In order to automatically build the book on each commit the `pre-commit.sh`
-script is created. You can activate it with the following command.
-
-```sh
-ln -s pre-commit.sh .git/hooks/pre-commit
-```
+### Publishing
+The book is automatically build and published on each commit to the main branch.
 
 [mdbook]: https://github.com/azerupi/mdBook
 [mdbook-docs]: http://azerupi.github.io/mdBook/
