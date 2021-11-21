@@ -24,5 +24,7 @@
     - [Separation](./brain/separation.md)
     - [Balance](./brain/balance.md)
     - [Sphere of influence](./brain/sphere.md)
+- [Stretch Goals](./stretch.md)
+    - [Food](./stretch/food.md)
 [Material](./material.md)
 [References](./references.md)
